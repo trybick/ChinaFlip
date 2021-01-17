@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile-piano",
-    "slug": "mobile-piano",
+    "name": "meditation-timer",
+    "slug": "meditation-timer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
