@@ -1,9 +1,10 @@
 import React from 'react';
+import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import { NativeRouter, Route, Switch } from 'react-router-native';
 import { ThemeProvider } from 'react-native-elements';
-import HomePage from './src/HomePage/HomePage';
-import CreateSessionPage from './src/CreateSessionPage/CreateSessionPage';
+import HomePage from './HomePage/HomePage';
+import CreateSessionPage from './CreateSessionPage/CreateSessionPage';
 
 export default function App() {
   return (
@@ -18,3 +19,5 @@ export default function App() {
     </ThemeProvider>
   );
 }
+
+registerRootComponent(App);
