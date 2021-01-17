@@ -1,14 +1,18 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Button, ThemeProvider } from 'react-native-elements';
+import { Button, ThemeProvider, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
 
 export default function App() {
   return (
     <ThemeProvider>
+      <StatusBar hidden />
       <Container>
-        <StatusBar hidden />
-        <Button title="test" />
+        <Button buttonStyle={{ marginBottom: 50 }} onPress={() => true} title="Create New" />
+        <Button buttonStyle={{ marginBottom: 50 }} onPress={() => true} title="Load Previous" />
+      </Container>
+      <Container>
+        <Text h4>Past sessions will appear here</Text>
       </Container>
     </ThemeProvider>
   );
