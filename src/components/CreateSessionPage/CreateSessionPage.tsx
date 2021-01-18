@@ -1,28 +1,35 @@
 import React from 'react';
+import { View } from 'react-native';
 import { Link, useHistory } from 'react-router-native';
-import { Button, Text } from 'react-native-elements';
+import { Button, Header, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
 
 export default function CreateSessionPage() {
   const history = useHistory();
 
   return (
-    <Container>
-      <Text>Create Page</Text>
+    <View>
+      <Header
+        leftComponent={{ text: 'Back', style: { color: '#fff' }, onPress: () => history.push('/') }}
+        centerComponent={{ text: 'Create', style: { color: '#fff' } }}
+      />
 
-      <Link to="/">
-        <Button
-          buttonStyle={{ marginBottom: 50 }}
-          onPress={() => history.push('/')}
-          title="Go Home"
-        />
-      </Link>
-    </Container>
+      <Container>
+        <Text>Create Page</Text>
+
+        <Link to="/">
+          <Button
+            buttonStyle={{ marginBottom: 50 }}
+            onPress={() => history.push('/')}
+            title="Go Home"
+          />
+        </Link>
+      </Container>
+    </View>
   );
 }
 
 const Container = styled.View`
-  flex: 1;
   background-color: white;
   align-items: center;
   justify-content: center;
