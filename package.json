@@ -1,5 +1,6 @@
 {
   "main": "src/App.tsx",
+  "license": "NONE",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
