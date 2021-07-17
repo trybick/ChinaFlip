@@ -9,7 +9,7 @@ export default function HomePage() {
 
   return (
     <View>
-      <Header centerComponent={{ text: 'Meditation Timer', style: { color: '#fff' } }} />
+      <Header centerComponent={{ text: 'China Flip', style: { color: '#fff' } }} />
 
       <Container>
         <Link to="/create">
