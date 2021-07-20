@@ -23,7 +23,7 @@ export default function CreateSessionPage() {
       />
 
       <PageContainer>
-        <Card>
+        <Card containerStyle={{ width: '100%' }}>
           <Card.Title>Level 1</Card.Title>
           <Card.Divider />
           {mockData.map(item => {
@@ -44,4 +44,5 @@ const PageContainer = styled.View`
   background-color: white;
   align-items: center;
   justify-content: center;
+  padding: 0 12px;
 `;
