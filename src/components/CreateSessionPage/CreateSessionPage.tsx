@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
-import { Card, Header, Text } from 'react-native-elements';
+import { Card, Header, Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
 
 const mockData = [
@@ -29,8 +29,14 @@ export default function CreateSessionPage() {
           {mockData.map(item => {
             return (
               <View key={item.audioFile}>
-                <Text>{item.chinese}</Text>
-                <Text>{item.english}</Text>
+                <WordsContainer>
+                  <Word>
+                    <Text>{item.chinese}</Text>
+                  </Word>
+                  <Word>
+                    <Text>{item.english}</Text>
+                  </Word>
+                </WordsContainer>
               </View>
             );
           })}
@@ -45,4 +51,14 @@ const PageContainer = styled.View`
   align-items: center;
   justify-content: center;
   padding: 0 12px;
+`;
+
+const WordsContainer = styled.View`
+  flex-direction: row;
+  align-self: flex-start;
+  width: 80%;
+`;
+
+const Word = styled.View`
+  width: 50%;
 `;
