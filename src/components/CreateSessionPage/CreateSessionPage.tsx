@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
-import { Button, Header, Text } from 'react-native-elements';
+import { Header, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
 
 export default function CreateSessionPage() {
@@ -14,21 +14,16 @@ export default function CreateSessionPage() {
         centerComponent={{ text: 'Create', style: { color: '#fff' } }}
       />
 
-      <Container>
+      <PageContainer>
         <Text>Create Page</Text>
-
-        <Button
-          buttonStyle={{ marginBottom: 50 }}
-          onPress={() => history.push('/')}
-          title="Go Home"
-        />
-      </Container>
+      </PageContainer>
     </View>
   );
 }
 
-const Container = styled.View`
+const PageContainer = styled.View`
   background-color: white;
   align-items: center;
   justify-content: center;
+  margin: 200px 0 0;
 `;

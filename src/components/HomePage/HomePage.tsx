@@ -11,19 +11,16 @@ export default function HomePage() {
     <View>
       <Header centerComponent={{ text: 'China Flip', style: { color: '#fff' } }} />
 
-      <Container>
-        <Button
-          buttonStyle={{ marginBottom: 50, marginTop: 200 }}
-          onPress={() => history.push('/level-1')}
-          title="Level 1"
-        />
-      </Container>
+      <PageContainer>
+        <Button onPress={() => history.push('/level-1')} title="Level 1" type="outline" raised />
+      </PageContainer>
     </View>
   );
 }
 
-const Container = styled.View`
+const PageContainer = styled.View`
   background-color: white;
   align-items: center;
   justify-content: center;
+  margin: 200px 0 0;
 `;
