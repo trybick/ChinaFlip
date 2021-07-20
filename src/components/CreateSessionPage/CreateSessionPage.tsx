@@ -28,7 +28,7 @@ export default function CreateSessionPage() {
           <Card.Divider />
           {mockData.map(item => {
             return (
-              <View key={item.audioFile}>
+              <Row key={item.audioFile}>
                 <WordsContainer>
                   <Word>
                     <Text>{item.chinese}</Text>
@@ -37,7 +37,14 @@ export default function CreateSessionPage() {
                     <Text>{item.english}</Text>
                   </Word>
                 </WordsContainer>
-              </View>
+
+                <Icon
+                  color="grey"
+                  name="star"
+                  onPress={() => console.log('hello')}
+                  type="font-awesome"
+                />
+              </Row>
             );
           })}
         </Card>
@@ -53,9 +60,12 @@ const PageContainer = styled.View`
   padding: 0 12px;
 `;
 
+const Row = styled.View`
+  flex-direction: row;
+`;
+
 const WordsContainer = styled.View`
   flex-direction: row;
-  align-self: flex-start;
   width: 80%;
 `;
 
