@@ -1,8 +1,16 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
-import { Header, Text } from 'react-native-elements';
+import { Card, Header, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
+
+const mockData = [
+  {
+    chinese: 'ni',
+    english: 'you',
+    audioFile: '001.mp3',
+  },
+];
 
 export default function CreateSessionPage() {
   const history = useHistory();
@@ -15,7 +23,18 @@ export default function CreateSessionPage() {
       />
 
       <PageContainer>
-        <Text>Create Page</Text>
+        <Card>
+          <Card.Title>Level 1</Card.Title>
+          <Card.Divider />
+          {mockData.map(item => {
+            return (
+              <View key={item.audioFile}>
+                <Text>{item.chinese}</Text>
+                <Text>{item.english}</Text>
+              </View>
+            );
+          })}
+        </Card>
       </PageContainer>
     </View>
   );
@@ -25,5 +44,4 @@ const PageContainer = styled.View`
   background-color: white;
   align-items: center;
   justify-content: center;
-  margin: 200px 0 0;
 `;
