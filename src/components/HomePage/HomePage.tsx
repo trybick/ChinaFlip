@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Link, useHistory } from 'react-router-native';
+import { useHistory } from 'react-router-native';
 import { Button, Header } from 'react-native-elements';
 import styled from 'styled-components/native';
 
@@ -12,14 +12,11 @@ export default function HomePage() {
       <Header centerComponent={{ text: 'China Flip', style: { color: '#fff' } }} />
 
       <Container>
-        <Link to="/create">
-          <Button
-            buttonStyle={{ marginBottom: 50 }}
-            onPress={() => history.push('/create')}
-            title="Create New Session"
-          />
-        </Link>
-        <Button buttonStyle={{ marginBottom: 50 }} onPress={() => true} title="Load Previous" />
+        <Button
+          buttonStyle={{ marginBottom: 50, marginTop: 200 }}
+          onPress={() => history.push('/level-1')}
+          title="Level 1"
+        />
       </Container>
     </View>
   );

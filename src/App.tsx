@@ -15,7 +15,7 @@ export default function App() {
 
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/create" component={CreateSessionPage} />
+          <Route exact path="/level-1" component={CreateSessionPage} />
         </Switch>
       </NativeRouter>
     </ThemeProvider>

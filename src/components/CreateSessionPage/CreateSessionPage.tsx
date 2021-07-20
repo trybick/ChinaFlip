@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Link, useHistory } from 'react-router-native';
+import { useHistory } from 'react-router-native';
 import { Button, Header, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
 
@@ -17,13 +17,11 @@ export default function CreateSessionPage() {
       <Container>
         <Text>Create Page</Text>
 
-        <Link to="/">
-          <Button
-            buttonStyle={{ marginBottom: 50 }}
-            onPress={() => history.push('/')}
-            title="Go Home"
-          />
-        </Link>
+        <Button
+          buttonStyle={{ marginBottom: 50 }}
+          onPress={() => history.push('/')}
+          title="Go Home"
+        />
       </Container>
     </View>
   );
