@@ -40,8 +40,15 @@ export default function CreateSessionPage() {
 
                 <Icon
                   color="grey"
+                  name="volume-high"
+                  onPress={() => console.log('hello')}
+                  type="ionicon"
+                />
+                <Icon
+                  color="grey"
                   name="star"
                   onPress={() => console.log('hello')}
+                  style={{ marginLeft: 8 }}
                   type="font-awesome"
                 />
               </Row>
@@ -66,9 +73,13 @@ const Row = styled.View`
 
 const WordsContainer = styled.View`
   flex-direction: row;
-  width: 80%;
+  width: 85%;
 `;
 
 const Word = styled.View`
   width: 50%;
+`;
+
+const IconContainer = styled.View`
+  flex-direction: row;
 `;
