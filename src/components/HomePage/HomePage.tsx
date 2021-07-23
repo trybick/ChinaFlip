@@ -16,8 +16,9 @@ export default function HomePage() {
         {Object.entries(words).map(([key, value]) => {
           return (
             <Button
+              key={key}
               onPress={() => history.push(`level-${key}`)}
-              title="Level 1"
+              title={key}
               type="outline"
               raised
             />
