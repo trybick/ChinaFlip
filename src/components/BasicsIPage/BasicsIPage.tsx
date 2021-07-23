@@ -3,14 +3,7 @@ import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Card, Header, Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
-
-const mockData = [
-  {
-    chinese: 'ni',
-    english: 'you',
-    audioFile: '001.mp3',
-  },
-];
+import words from '../../../data/words.json';
 
 export default function BasicsIPage() {
   const history = useHistory();
@@ -26,9 +19,9 @@ export default function BasicsIPage() {
         <Card containerStyle={{ width: '100%' }}>
           <Card.Title>Basics I</Card.Title>
           <Card.Divider />
-          {mockData.map(item => {
+          {words['basics-1'].map(item => {
             return (
-              <Row key={item.audioFile}>
+              <Row key={item.id}>
                 <WordsContainer>
                   <Word>
                     <Text>{item.chinese}</Text>
