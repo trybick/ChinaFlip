@@ -1,12 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
-import { useHistory } from 'react-router-native';
+import { useLocation, useHistory } from 'react-router-native';
 import { Card, Header, Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
-import words from 'data/words';
+import { Word as WordType } from 'data/words';
 
 export default function BasicsIPage() {
   const history = useHistory();
+  const location = useLocation<{ words: WordType[] }>();
 
   return (
     <View>
@@ -19,15 +20,15 @@ export default function BasicsIPage() {
         <Card containerStyle={{ width: '100%' }}>
           <Card.Title>Level 1</Card.Title>
           <Card.Divider />
-          {words['01'].map(item => {
+          {location.state.words.map(({ id, chinese, english }) => {
             return (
-              <Row key={item.id}>
+              <Row key={id}>
                 <WordsContainer>
                   <Word>
-                    <Text>{item.chinese}</Text>
+                    <Text>{chinese}</Text>
                   </Word>
                   <Word>
-                    <Text>{item.english}</Text>
+                    <Text>{english}</Text>
                   </Word>
                 </WordsContainer>
 

@@ -3,7 +3,7 @@ enum Levels {
   TWO = '02',
 }
 
-type Word = {
+export type Word = {
   id: string;
   english: string;
   chinese: string;

@@ -17,7 +17,7 @@ export default function HomePage() {
           return (
             <Button
               key={key}
-              onPress={() => history.push(`level-${key}`)}
+              onPress={() => history.push(`level/${key}`, value)}
               title={key}
               type="outline"
               raised
