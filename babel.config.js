@@ -17,6 +17,9 @@ module.exports = function (api) {
             '.ios.js',
             '.ios.tsx',
           ],
+          alias: {
+            data: './data',
+          },
         },
       ],
     ],

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Card, Header, Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
-import words from '../../../data/words';
+import words from 'data/words';
 
 export default function BasicsIPage() {
   const history = useHistory();
