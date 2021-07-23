@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Card, Header, Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
-import words from '../../../data/words.json';
+import words from '../../../data/words';
 
 export default function BasicsIPage() {
   const history = useHistory();
@@ -19,7 +19,7 @@ export default function BasicsIPage() {
         <Card containerStyle={{ width: '100%' }}>
           <Card.Title>Basics I</Card.Title>
           <Card.Divider />
-          {words['basics-1'].map(item => {
+          {words['01'].map(item => {
             return (
               <Row key={item.id}>
                 <WordsContainer>
