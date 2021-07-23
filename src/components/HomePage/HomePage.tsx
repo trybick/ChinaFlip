@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Button, Header } from 'react-native-elements';
 import styled from 'styled-components/native';
+import words from '../../../data/words';
 
 export default function HomePage() {
   const history = useHistory();
@@ -12,7 +13,16 @@ export default function HomePage() {
       <Header centerComponent={{ text: 'China Flip', style: { color: '#fff' } }} />
 
       <PageContainer>
-        <Button onPress={() => history.push('/level-01')} title="Level 1" type="outline" raised />
+        {Object.entries(words).map(([key, value]) => {
+          return (
+            <Button
+              onPress={() => history.push(`level-${key}`)}
+              title="Level 1"
+              type="outline"
+              raised
+            />
+          );
+        })}
       </PageContainer>
     </View>
   );
