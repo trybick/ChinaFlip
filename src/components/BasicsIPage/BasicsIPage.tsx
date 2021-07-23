@@ -17,7 +17,7 @@ export default function BasicsIPage() {
 
       <PageContainer>
         <Card containerStyle={{ width: '100%' }}>
-          <Card.Title>Basics I</Card.Title>
+          <Card.Title>Level 1</Card.Title>
           <Card.Divider />
           {words['01'].map(item => {
             return (
@@ -31,19 +31,8 @@ export default function BasicsIPage() {
                   </Word>
                 </WordsContainer>
 
-                <Icon
-                  color="grey"
-                  name="volume-high"
-                  onPress={() => console.log('hello')}
-                  type="ionicon"
-                />
-                <Icon
-                  color="grey"
-                  name="star"
-                  onPress={() => console.log('hello')}
-                  style={{ marginLeft: 8 }}
-                  type="font-awesome"
-                />
+                <Icon color="grey" name="volume-high" type="ionicon" />
+                <Icon color="grey" name="star" style={{ marginLeft: 8 }} type="font-awesome" />
               </Row>
             );
           })}
