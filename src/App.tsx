@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { BackButton, NativeRouter, Route, Switch } from 'react-router-native';
 import { ThemeProvider } from 'react-native-elements';
 import HomePage from 'src/components/HomePage/HomePage';
-import CreateSessionPage from 'src/components/CreateSessionPage/CreateSessionPage';
+import CreateSessionPage from 'src/components/BasicsIPage/BasicsIPage';
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
 
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/level-1" component={CreateSessionPage} />
+          <Route exact path="/basicsI" component={CreateSessionPage} />
         </Switch>
       </NativeRouter>
     </ThemeProvider>

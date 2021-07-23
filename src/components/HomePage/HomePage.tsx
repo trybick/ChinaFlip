@@ -12,7 +12,7 @@ export default function HomePage() {
       <Header centerComponent={{ text: 'China Flip', style: { color: '#fff' } }} />
 
       <PageContainer>
-        <Button onPress={() => history.push('/level-1')} title="Level 1" type="outline" raised />
+        <Button onPress={() => history.push('/basicsI')} title="Basics I" type="outline" raised />
       </PageContainer>
     </View>
   );

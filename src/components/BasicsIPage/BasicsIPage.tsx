@@ -12,7 +12,7 @@ const mockData = [
   },
 ];
 
-export default function CreateSessionPage() {
+export default function BasicsIPage() {
   const history = useHistory();
 
   return (
@@ -24,7 +24,7 @@ export default function CreateSessionPage() {
 
       <PageContainer>
         <Card containerStyle={{ width: '100%' }}>
-          <Card.Title>Level 1</Card.Title>
+          <Card.Title>Basics I</Card.Title>
           <Card.Divider />
           {mockData.map(item => {
             return (
@@ -78,8 +78,4 @@ const WordsContainer = styled.View`
 
 const Word = styled.View`
   width: 50%;
-`;
-
-const IconContainer = styled.View`
-  flex-direction: row;
 `;
