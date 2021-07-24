@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useLocation, useHistory } from 'react-router-native';
-import { Card, Header, Icon, Text } from 'react-native-elements';
+import { Card, Header } from 'react-native-elements';
 import styled from 'styled-components/native';
 import { Word as WordType } from 'data/words';
 import WordRow from './WordRow';
