@@ -9,8 +9,8 @@ import WordRow from './WordRow';
 export default function WordListPage() {
   const history = useHistory();
   const {
-    state: { words },
-  } = useLocation<{ words: WordType[] }>();
+    state: { words, level },
+  } = useLocation<{ words: WordType[]; level: string }>();
 
   return (
     <View>
@@ -21,7 +21,7 @@ export default function WordListPage() {
 
       <PageContainer>
         <Card containerStyle={{ width: '100%' }}>
-          <Card.Title>Level 1</Card.Title>
+          <Card.Title>{level}</Card.Title>
           <Card.Divider />
           {words.map(word => (
             <WordRow word={word} />
