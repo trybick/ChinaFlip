@@ -3,6 +3,16 @@ enum Levels {
   TWO = '02',
 }
 
+const LevelTitlesForDisplay = {
+  ['01']: 'Basics I',
+  ['02']: 'Basics II',
+};
+
+export const getTitleFromLevel = (level: string) => {
+  // @ts-ignore
+  return LevelTitlesForDisplay[level];
+};
+
 export type Word = {
   id: string;
   english: string;
