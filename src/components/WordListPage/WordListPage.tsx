@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { useLocation, useHistory } from 'react-router-native';
 import { Card, Header } from 'react-native-elements';
 import styled from 'styled-components/native';
@@ -15,19 +15,25 @@ export default function WordListPage() {
   return (
     <View>
       <Header
-        leftComponent={{ text: 'Back', style: { color: '#fff' }, onPress: () => history.push('/') }}
+        leftComponent={{
+          text: 'Back',
+          style: { color: '#fff' },
+          onPress: () => history.push('/'),
+        }}
         centerComponent={{ text: 'Create', style: { color: '#fff' } }}
       />
 
-      <PageContainer>
-        <Card containerStyle={{ width: '100%' }}>
-          <Card.Title>{level}</Card.Title>
-          <Card.Divider />
-          {words.map(word => (
-            <WordRow key={word.id} word={word} />
-          ))}
-        </Card>
-      </PageContainer>
+      <ScrollView>
+        <PageContainer>
+          <Card>
+            <Card.Title>{level}</Card.Title>
+            <Card.Divider />
+            {words.map(word => (
+              <WordRow key={word.id} word={word} />
+            ))}
+          </Card>
+        </PageContainer>
+      </ScrollView>
     </View>
   );
 }
@@ -37,4 +43,5 @@ const PageContainer = styled.View`
   align-items: center;
   justify-content: center;
   padding: 0 12px;
+  margin-bottom: 30%;
 `;
