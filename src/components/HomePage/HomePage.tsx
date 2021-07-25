@@ -8,7 +8,7 @@ import LevelButton from './LevelButton';
 export default function HomePage() {
   return (
     <View>
-      <Header centerComponent={{ text: 'China Flip', style: { color: '#fff' } }} />
+      <Header centerComponent={{ text: 'ChinaFlip', style: { color: '#fff' } }} />
       <PageContainer>
         {Object.entries(WORDS).map(([level, words]) => (
           <LevelButton key={level} level={level as Level} words={words} />
