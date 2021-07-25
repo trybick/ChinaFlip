@@ -1,15 +1,11 @@
-enum Levels {
-  ONE = '01',
-  TWO = '02',
-}
+export type Levels = '01' | '02';
 
-const LevelTitlesForDisplay = {
+const LevelTitlesForDisplay: { [key in Levels]: string } = {
   ['01']: 'Basics I',
   ['02']: 'Basics II',
 };
 
-export const getTitleFromLevel = (level: string) => {
-  // @ts-ignore
+export const getTitleFromLevel = (level: Levels) => {
   return LevelTitlesForDisplay[level];
 };
 

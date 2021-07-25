@@ -1,9 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-native';
 import { Button } from 'react-native-elements';
-import { getTitleFromLevel, Word as WordType } from 'data/words';
+import { getTitleFromLevel, Levels, Word as WordType } from 'data/words';
 
-export default function LevelButton({ level, words }: { level: string; words: WordType[] }) {
+export default function LevelButton({ level, words }: { level: Levels; words: WordType[] }) {
   const history = useHistory();
 
   return (
