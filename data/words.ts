@@ -1,11 +1,11 @@
-export type Levels = '01' | '02';
+export type Level = '01' | '02';
 
-const LevelTitlesForDisplay: { [key in Levels]: string } = {
+const LevelTitlesForDisplay: { [key in Level]: string } = {
   ['01']: 'Basics I',
   ['02']: 'Basics II',
 };
 
-export const getTitleFromLevel = (level: Levels) => {
+export const getTitleFromLevel = (level: Level) => {
   return LevelTitlesForDisplay[level];
 };
 
@@ -16,7 +16,7 @@ export type Word = {
 };
 
 type WordsObject = {
-  [key in Levels]: Word[];
+  [key in Level]: Word[];
 };
 
 export default <WordsObject>{
