@@ -22,5 +22,8 @@ const PageContainer = styled.View`
   background-color: white;
   align-items: center;
   justify-content: center;
-  margin: 200px 0 0;
+  margin: 50px 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;

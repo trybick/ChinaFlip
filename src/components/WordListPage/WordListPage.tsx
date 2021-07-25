@@ -24,7 +24,7 @@ export default function WordListPage() {
           <Card.Title>{level}</Card.Title>
           <Card.Divider />
           {words.map(word => (
-            <WordRow word={word} />
+            <WordRow key={word.id} word={word} />
           ))}
         </Card>
       </PageContainer>
