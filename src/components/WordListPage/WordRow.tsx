@@ -21,29 +21,21 @@ export default function WordRow({ word: { id, chinese, english } }: { word: Word
           <Text>{chinese}</Text>
         </Word>
       </WordsContainer>
-
-      <Icon
-        color="grey"
-        name="checkbox-blank-outline"
-        size={20}
-        style={{ marginLeft: 8 }}
-        type="material-community"
-      />
+      <Icon color="grey" name="checkbox-blank-outline" size={20} type="material-community" />
     </Row>
   );
 }
 
 const Row = styled.View`
   flex-direction: row;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 `;
 
 const WordsContainer = styled.View`
   flex-direction: row;
-  width: 85%;
 `;
 
 const Word = styled.View`
-  width: 50%;
+  width: 46%;
   flex-direction: row;
 `;
