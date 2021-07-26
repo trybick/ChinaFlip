@@ -16,7 +16,12 @@ export default function WordRow({ word: { id, chinese, english } }: { word: Word
       </WordsContainer>
 
       <Icon color="grey" name="volume-high" type="ionicon" />
-      <Icon color="grey" name="star" style={{ marginLeft: 8 }} type="font-awesome" />
+      <Icon
+        color="grey"
+        name="checkbox-blank-outline"
+        style={{ marginLeft: 8 }}
+        type="material-community"
+      />
     </Row>
   );
 }
