@@ -3,7 +3,15 @@ import { Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
 import { Word as WordType } from 'data/words';
 
-export default function WordRow({ word: { id, chinese, english } }: { word: WordType }) {
+export default function WordRow({
+  items,
+  setItem,
+  word: { id, chinese, english },
+}: {
+  items: any;
+  setItem: any;
+  word: WordType;
+}) {
   return (
     <Row key={id}>
       <WordsContainer>
@@ -21,7 +29,13 @@ export default function WordRow({ word: { id, chinese, english } }: { word: Word
           <Text>{chinese}</Text>
         </Word>
       </WordsContainer>
-      <Icon color="grey" name="checkbox-blank-outline" size={20} type="material-community" />
+      <Icon
+        color="grey"
+        name={items && items?.includes(id) ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
+        onPress={() => setItem(id, items && items?.includes(id))}
+        size={20}
+        type="material-community"
+      />
     </Row>
   );
 }
