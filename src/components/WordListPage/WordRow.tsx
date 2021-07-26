@@ -8,17 +8,24 @@ export default function WordRow({ word: { id, chinese, english } }: { word: Word
     <Row key={id}>
       <WordsContainer>
         <Word>
-          <Text>{chinese}</Text>
+          <Text>{english}</Text>
         </Word>
         <Word>
-          <Text>{english}</Text>
+          <Icon
+            color="grey"
+            name="volume-high"
+            size={16}
+            style={{ marginRight: 3 }}
+            type="ionicon"
+          />
+          <Text>{chinese}</Text>
         </Word>
       </WordsContainer>
 
-      <Icon color="grey" name="volume-high" type="ionicon" />
       <Icon
         color="grey"
         name="checkbox-blank-outline"
+        size={20}
         style={{ marginLeft: 8 }}
         type="material-community"
       />
@@ -28,6 +35,7 @@ export default function WordRow({ word: { id, chinese, english } }: { word: Word
 
 const Row = styled.View`
   flex-direction: row;
+  margin-bottom: 5%;
 `;
 
 const WordsContainer = styled.View`
@@ -37,4 +45,5 @@ const WordsContainer = styled.View`
 
 const Word = styled.View`
   width: 50%;
+  flex-direction: row;
 `;
