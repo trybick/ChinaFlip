@@ -33,7 +33,7 @@ export default function WordListPage() {
             {words.map(word => (
               <WordRow
                 key={word.id}
-                getIsCompleted={getIsCompleted}
+                isCompleted={getIsCompleted(word.id)}
                 toggleCompletedWord={toggleCompletedWord}
                 word={word}
               />

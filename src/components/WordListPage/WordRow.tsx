@@ -4,11 +4,11 @@ import styled from 'styled-components/native';
 import { Word as WordType } from 'data/words';
 
 export default function WordRow({
-  getIsCompleted,
+  isCompleted,
   toggleCompletedWord,
   word: { id, chinese, english },
 }: {
-  getIsCompleted: (id: string) => boolean;
+  isCompleted: boolean;
   toggleCompletedWord: (id: string) => Promise<void>;
   word: WordType;
 }) {
@@ -32,7 +32,7 @@ export default function WordRow({
         </WordsContainer>
         <Icon
           color="grey"
-          name={getIsCompleted(id) ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
+          name={isCompleted ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
           onPress={() => toggleCompletedWord(id)}
           size={20}
           type="material-community"
