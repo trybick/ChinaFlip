@@ -20,7 +20,7 @@ type WordsObject = {
 };
 
 export default <WordsObject>{
-  ['01']: [
+  '01': [
     {
       id: '0001',
       english: 'Hello',
@@ -83,8 +83,8 @@ export default <WordsObject>{
     },
     {
       id: '0013',
-      english: 'I’m from …',
-      chinese: 'wǒ cóng … lái',
+      english: 'I’m from America',
+      chinese: 'wǒ láizì měiguó',
     },
     {
       id: '0014',
@@ -187,7 +187,7 @@ export default <WordsObject>{
       chinese: 'jiè guò yī xià',
     },
   ],
-  ['02']: [
+  '02': [
     {
       id: '0034',
       english: 'I know',
