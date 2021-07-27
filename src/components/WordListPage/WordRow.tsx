@@ -14,7 +14,7 @@ export default function WordRow({
 }) {
   return (
     <>
-      <Row key={id}>
+      <Row key={id} style={{ opacity: isCompleted ? 0.4 : 1 }}>
         <WordsContainer>
           <Word>
             <Text>{english}</Text>
