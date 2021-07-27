@@ -1,0 +1,34 @@
+import { useEffect, useState } from 'react';
+import { useAsyncStorage } from '@react-native-async-storage/async-storage';
+
+const STORAGE_KEY = 'completedWords';
+
+export const useCompletedWordsStorage = () => {
+  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEY);
+  const [completedWords, setCompletedWords] = useState<string[]>([]);
+
+  const loadFromStorage = async () => {
+    const item = await loadItem();
+    const parsed: string[] = item && JSON.parse(item);
+    setCompletedWords(parsed);
+  };
+
+  const toggleCompletedWord = async (id: string) => {
+    let updatedArray: string[];
+    if (getIsCompleted(id)) {
+      updatedArray = completedWords?.filter(wordId => wordId !== id);
+    } else {
+      updatedArray = [...(completedWords || []), id];
+    }
+    setCompletedWords(updatedArray);
+    await storeItem(JSON.stringify(updatedArray));
+  };
+
+  const getIsCompleted = (id: string) => completedWords.includes(id);
+
+  useEffect(() => {
+    loadFromStorage();
+  }, []);
+
+  return { completedWords, getIsCompleted, toggleCompletedWord };
+};
