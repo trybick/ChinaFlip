@@ -1,25 +1,6 @@
-export type Level = '01' | '02';
+import { Database } from './helper';
 
-const LevelTitlesForDisplay: { [key in Level]: string } = {
-  ['01']: 'Basics I',
-  ['02']: 'Basics II',
-};
-
-export const getTitleFromLevel = (level: Level) => {
-  return LevelTitlesForDisplay[level];
-};
-
-export type Word = {
-  id: string;
-  english: string;
-  chinese: string;
-};
-
-type WordsObject = {
-  [key in Level]: Word[];
-};
-
-export default <WordsObject>{
+export default <Database>{
   '01': [
     {
       id: '0001',

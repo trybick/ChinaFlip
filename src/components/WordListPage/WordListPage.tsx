@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 import { useLocation, useHistory } from 'react-router-native';
 import { Card, Header } from 'react-native-elements';
 import styled from 'styled-components/native';
-import { getTitleFromLevel, Level, Word as WordType } from 'data/words';
+import { getTitleForDisplay, Level, Word as WordType } from 'database/helper';
 import WordRow from './WordRow';
 import { useCompletedWordsStorage } from '../../hooks/useCompletedWordsStorage';
 
@@ -28,7 +28,7 @@ export default function WordListPage() {
       <ScrollView>
         <PageContainer>
           <Card containerStyle={{ width: '90%' }}>
-            <Card.Title>{getTitleFromLevel(level)}</Card.Title>
+            <Card.Title>{getTitleForDisplay(level)}</Card.Title>
             <Card.Divider />
             {words.map(word => (
               <WordRow

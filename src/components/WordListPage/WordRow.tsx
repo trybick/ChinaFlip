@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Icon, Text } from 'react-native-elements';
 import styled from 'styled-components/native';
-import { Word as WordType } from 'data/words';
+import { Word as WordType } from 'database/helper';
 
 export default function WordRow({
   isCompleted,

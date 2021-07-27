@@ -10,7 +10,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "data/*": ["data/*"]
+      "data/*": ["database/*"]
     }
   },
   "include": ["."],

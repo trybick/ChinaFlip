@@ -2,7 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 import { Header } from 'react-native-elements';
 import styled from 'styled-components/native';
-import WORDS, { Level } from 'data/words';
+import WORDS from 'database/words';
+import { Level } from 'database/helper';
 import LevelButton from './LevelButton';
 
 export default function HomePage() {
