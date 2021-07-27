@@ -9,8 +9,7 @@ export const useCompletedWordsStorage = () => {
 
   const loadFromStorage = async () => {
     const item = await loadItem();
-    const parsed: string[] = item && JSON.parse(item);
-    setCompletedWords(parsed);
+    setCompletedWords(item && JSON.parse(item));
   };
 
   const toggleCompletedWord = async (id: string) => {
