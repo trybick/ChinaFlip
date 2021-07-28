@@ -15,7 +15,7 @@ export default function App() {
 
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/level/:id" component={WordListPage} />
+          <Route exact path="/wordlist/:id" component={WordListPage} />
         </Switch>
       </NativeRouter>
     </ThemeProvider>

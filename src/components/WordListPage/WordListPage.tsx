@@ -6,6 +6,7 @@ import styled from 'styled-components/native';
 import { getTitleForDisplay, Level, Word as WordType } from 'database/helper';
 import { useCompletedWordsStorage } from 'hooks/useCompletedWordsStorage';
 import WordRow from './WordRow';
+import { ROUTES } from '../../utils/routes';
 
 export default function WordListPage() {
   const history = useHistory();
@@ -20,7 +21,7 @@ export default function WordListPage() {
         leftComponent={{
           text: 'Back',
           style: { color: '#fff' },
-          onPress: () => history.push('/'),
+          onPress: () => history.push(ROUTES.HOME),
         }}
         centerComponent={{ text: 'ChinaFlip', style: { color: '#fff' } }}
       />
