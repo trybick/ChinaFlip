@@ -2,10 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
@@ -13,16 +10,11 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "database/*": [
-        "database/*"
-      ],
-      "hooks/*": [
-        "src/hooks/*"
-      ]
+      "database/*": ["database/*"],
+      "hooks/*": ["src/hooks/*"],
+      "utils/*": ["src/utils/*"]
     }
   },
-  "include": [
-    "."
-  ],
+  "include": ["."],
   "extends": "expo/tsconfig.base"
 }

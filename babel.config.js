@@ -20,6 +20,7 @@ module.exports = function (api) {
           alias: {
             database: './database',
             hooks: './src/hooks',
+            utils: './src/utils',
           },
         },
       ],
