@@ -23,18 +23,18 @@ export default function WordRow({
             <Icon
               color="grey"
               name="volume-high"
-              size={16}
-              style={{ marginRight: 3 }}
+              size={20}
+              style={{ marginRight: 4 }}
               type="ionicon"
             />
-            <Text>{chinese}</Text>
+            <Text style={{ lineHeight: 20 }}>{chinese}</Text>
           </Word>
         </WordsContainer>
         <Icon
           color="grey"
           name={isCompleted ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
           onPress={() => toggleCompletedWord(id)}
-          size={20}
+          size={24}
           type="material-community"
         />
       </Row>

@@ -28,7 +28,7 @@ export default function WordListPage() {
 
       <ScrollView>
         <PageContainer>
-          <Card containerStyle={{ width: '90%' }}>
+          <Card containerStyle={{ width: '100%' }}>
             <Card.Title>{getTitleForDisplay(level)}</Card.Title>
             <Card.Divider />
             {words.map(word => (
