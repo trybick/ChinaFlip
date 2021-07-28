@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
-const STORAGE_KEY = 'completedWords';
+const STORAGE_KEY = 'COMPLETED_WORDS';
 
 export const useCompletedWordsStorage = () => {
   const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEY);
@@ -23,11 +23,11 @@ export const useCompletedWordsStorage = () => {
     await storeItem(JSON.stringify(updatedArray));
   };
 
-  const getIsCompleted = (id: string) => completedWords.includes(id);
+  const getIsCompleted = (id: string) => completedWords?.includes(id);
 
   useEffect(() => {
     loadFromStorage();
   }, []);
 
-  return { completedWords, getIsCompleted, toggleCompletedWord };
+  return { getIsCompleted, toggleCompletedWord };
 };
