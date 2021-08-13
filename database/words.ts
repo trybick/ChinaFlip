@@ -355,4 +355,126 @@ export default <Database>{
       chinese: 'Hǎo gǎo xiào',
     },
   ],
+  '03': [
+    {
+      id: '0071',
+      english: '0',
+      chinese: 'Líng',
+    },
+    {
+      id: '0072',
+      english: '1',
+      chinese: 'Yī',
+    },
+    {
+      id: '0073',
+      english: '2',
+      chinese: 'Èr',
+    },
+    {
+      id: '0074',
+      english: '3',
+      chinese: 'Sān',
+    },
+    {
+      id: '0075',
+      english: '4',
+      chinese: 'Sì',
+    },
+    {
+      id: '0076',
+      english: '5',
+      chinese: 'Wǔ',
+    },
+    {
+      id: '0077',
+      english: '6',
+      chinese: 'Liù',
+    },
+    {
+      id: '0078',
+      english: '7',
+      chinese: 'Qī',
+    },
+    {
+      id: '0079',
+      english: '8',
+      chinese: 'Bā',
+    },
+    {
+      id: '0080',
+      english: '9',
+      chinese: 'Jiǔ',
+    },
+    {
+      id: '0081',
+      english: '10',
+      chinese: 'Shí',
+    },
+    {
+      id: '0082',
+      english: '11',
+      chinese: 'Shí yī',
+    },
+    {
+      id: '0083',
+      english: '12',
+      chinese: 'Shí èr',
+    },
+    {
+      id: '0084',
+      english: '13',
+      chinese: 'Shí sān',
+    },
+    {
+      id: '0085',
+      english: '14',
+      chinese: 'Shí sì',
+    },
+    {
+      id: '0086',
+      english: '15',
+      chinese: 'Shí wǔ',
+    },
+    {
+      id: '0087',
+      english: '16',
+      chinese: 'Shí liù',
+    },
+    {
+      id: '0088',
+      english: '17',
+      chinese: 'Shí qī',
+    },
+    {
+      id: '0089',
+      english: '18',
+      chinese: 'Shí bā',
+    },
+    {
+      id: '0090',
+      english: '19',
+      chinese: 'Shí jiǔ',
+    },
+    {
+      id: '0091',
+      english: '20',
+      chinese: 'Èr shí',
+    },
+    {
+      id: '0092',
+      english: '100',
+      chinese: 'Yì bǎi',
+    },
+    {
+      id: '0093',
+      english: '200',
+      chinese: 'Èr bǎi',
+    },
+    {
+      id: '0094',
+      english: '1000',
+      chinese: 'Yī qiān',
+    },
+  ],
 };
