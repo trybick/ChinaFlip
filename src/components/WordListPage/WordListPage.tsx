@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 import { useLocation, useHistory } from 'react-router-native';
 import { Card, Header } from 'react-native-elements';
 import styled from 'styled-components/native';
-import { getTitleForDisplay, Level, Word as WordType } from 'database/helper';
+import { getTitleForDisplay, WordListID, Word as WordType } from 'database/helper';
 import { useCompletedWordsStorage } from 'hooks/useCompletedWordsStorage';
 import WordRow from './WordRow';
 import { ROUTES } from 'utils/routes';
@@ -11,8 +11,8 @@ import { ROUTES } from 'utils/routes';
 export default function WordListPage() {
   const history = useHistory();
   const {
-    state: { words, level },
-  } = useLocation<{ words: WordType[]; level: Level }>();
+    state: { words, wordListID },
+  } = useLocation<{ words: WordType[]; wordListID: WordListID }>();
   const { getIsCompleted, toggleCompletedWord } = useCompletedWordsStorage();
 
   return (
@@ -29,7 +29,7 @@ export default function WordListPage() {
       <ScrollView>
         <PageContainer>
           <Card containerStyle={{ width: '100%' }}>
-            <Card.Title>{getTitleForDisplay(level)}</Card.Title>
+            <Card.Title>{getTitleForDisplay(wordListID)}</Card.Title>
             <Card.Divider />
             {words.map(word => (
               <WordRow

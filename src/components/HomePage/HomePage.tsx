@@ -3,16 +3,16 @@ import { View } from 'react-native';
 import { Header } from 'react-native-elements';
 import styled from 'styled-components/native';
 import WORDS from 'database/words';
-import { Level } from 'database/helper';
-import LevelButton from './LevelButton';
+import { WordListID } from 'database/helper';
+import WordListButton from './WordListButton';
 
 export default function HomePage() {
   return (
     <View>
       <Header centerComponent={{ text: 'ChinaFlip', style: { color: '#fff' } }} />
       <PageContainer>
-        {Object.entries(WORDS).map(([level, words]) => (
-          <LevelButton key={level} level={level as Level} words={words} />
+        {Object.entries(WORDS).map(([wordListID, words]) => (
+          <WordListButton key={wordListID} wordListID={wordListID as WordListID} words={words} />
         ))}
       </PageContainer>
     </View>

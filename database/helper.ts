@@ -1,11 +1,11 @@
-export type Level = '01' | '02';
+export type WordListID = '01' | '02';
 
-const LevelTitlesForDisplay: { [key in Level]: string } = {
+const WordListTitlesForDisplay: { [key in WordListID]: string } = {
   ['01']: 'Basics I',
   ['02']: 'Basics II',
 };
 
-export const getTitleForDisplay = (level: Level) => LevelTitlesForDisplay[level];
+export const getTitleForDisplay = (id: WordListID) => WordListTitlesForDisplay[id];
 
 export type Word = {
   id: string;
@@ -14,5 +14,5 @@ export type Word = {
 };
 
 export type Database = {
-  [key in Level]: Word[];
+  [key in WordListID]: Word[];
 };
