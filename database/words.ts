@@ -477,4 +477,299 @@ export default <Database>{
       chinese: 'Yī qiān',
     },
   ],
+  '04': [
+    {
+      id: '0095',
+      english: 'Animal',
+      chinese: 'Dòng wù',
+    },
+    {
+      id: '0096',
+      english: 'Dog',
+      chinese: 'Gǒu',
+    },
+    {
+      id: '0097',
+      english: 'Cat',
+      chinese: 'Māo',
+    },
+    {
+      id: '0098',
+      english: 'Dragon',
+      chinese: 'Lóng',
+    },
+    {
+      id: '0099',
+      english: 'Dolphin',
+      chinese: 'Hǎi tún',
+    },
+    {
+      id: '0100',
+      english: 'Snake',
+      chinese: 'Shé',
+    },
+    {
+      id: '0101',
+      english: 'Cow',
+      chinese: 'Niú',
+    },
+    {
+      id: '0102',
+      english: 'Rat',
+      chinese: 'Shǔ',
+    },
+    {
+      id: '0103',
+      english: 'Tiger',
+      chinese: 'Hǔ',
+    },
+    {
+      id: '0104',
+      english: 'Rabbit',
+      chinese: 'Tù zǐ',
+    },
+    {
+      id: '0105',
+      english: 'Horse',
+      chinese: 'Mǎ',
+    },
+  ],
+  '05': [
+    {
+      id: '0106',
+      english: 'Body',
+      chinese: 'Shēn tǐ',
+    },
+    {
+      id: '0107',
+      english: 'Head',
+      chinese: 'Tóu',
+    },
+    {
+      id: '0108',
+      english: 'Face',
+      chinese: 'Liǎn',
+    },
+    {
+      id: '0109',
+      english: 'Mouth',
+      chinese: 'Zuǐ',
+    },
+    {
+      id: '0110',
+      english: 'Chest',
+      chinese: 'Xiōng',
+    },
+    {
+      id: '0111',
+      english: 'Back',
+      chinese: 'Bèi',
+    },
+    {
+      id: '0112',
+      english: 'Arm',
+      chinese: 'Gē bo',
+    },
+    {
+      id: '0113',
+      english: 'Hand',
+      chinese: 'Shǒu',
+    },
+    {
+      id: '0114',
+      english: 'Leg',
+      chinese: 'Tuǐ',
+    },
+    {
+      id: '0115',
+      english: 'Feet',
+      chinese: 'Jiǎodǐ',
+    },
+    {
+      id: '0116',
+      english: 'Ear',
+      chinese: 'Ěrduǒ',
+    },
+    {
+      id: '0117',
+      english: 'Heart',
+      chinese: 'Ěrduǒ',
+    },
+    {
+      id: '0118',
+      english: 'Brain',
+      chinese: 'Nǎo',
+    },
+  ],
+  '06': [
+    {
+      id: '0119',
+      english: 'Black',
+      chinese: 'Hēi sè',
+    },
+    {
+      id: '0120',
+      english: 'White',
+      chinese: 'Bái sè',
+    },
+    {
+      id: '0121',
+      english: 'Red',
+      chinese: 'Hóng sè',
+    },
+    {
+      id: '0122',
+      english: 'Green',
+      chinese: 'Lǜ sè',
+    },
+    {
+      id: '0123',
+      english: 'Yellow',
+      chinese: 'Huáng sè',
+    },
+    {
+      id: '0124',
+      english: 'Orange',
+      chinese: 'Chéngsè de',
+    },
+    {
+      id: '0125',
+      english: 'Blue',
+      chinese: 'Lán sè',
+    },
+    {
+      id: '0126',
+      english: 'Pink',
+      chinese: 'Fěn sè',
+    },
+    {
+      id: '0127',
+      english: 'Purple',
+      chinese: 'Zǐ sè',
+    },
+    {
+      id: '0128',
+      english: 'Gray',
+      chinese: 'Huī sè',
+    },
+    {
+      id: '0129',
+      english: 'Gold',
+      chinese: 'Jīn sè',
+    },
+  ],
+  '07': [
+    {
+      id: '0130',
+      english: 'Left',
+      chinese: 'Zuǒ biān',
+    },
+    {
+      id: '0131',
+      english: 'Right',
+      chinese: 'Yòu biān',
+    },
+    {
+      id: '0132',
+      english: 'Up',
+      chinese: 'Xiàng shàng',
+    },
+    {
+      id: '0133',
+      english: 'Down',
+      chinese: 'Xiàng xià',
+    },
+    {
+      id: '0134',
+      english: 'Go straight',
+      chinese: 'Zhí zǒu',
+    },
+    {
+      id: '0135',
+      english: 'Go backwards',
+      chinese: 'Xiàng hòu zǒu',
+    },
+    {
+      id: '0136',
+      english: 'Over',
+      chinese: 'Guò',
+    },
+    {
+      id: '0137',
+      english: 'Through',
+      chinese: 'Tōng guò',
+    },
+    {
+      id: '0138',
+      english: 'Next to',
+      chinese: 'Páng biān',
+    },
+    {
+      id: '0139',
+      english: 'North',
+      chinese: 'Běi',
+    },
+    {
+      id: '0140',
+      english: 'East',
+      chinese: 'Dōng',
+    },
+    {
+      id: '0141',
+      english: 'South',
+      chinese: 'Nán',
+    },
+    {
+      id: '0142',
+      english: 'West',
+      chinese: 'Xī',
+    },
+    {
+      id: '0143',
+      english: 'Next to',
+      chinese: 'Páng biān',
+    },
+  ],
+  '08': [
+    {
+      id: '0144',
+      english: 'Excited',
+      chinese: 'xīngfèn',
+    },
+    {
+      id: '0145',
+      english: 'Happy',
+      chinese: 'Kuàilè de',
+    },
+    {
+      id: '0146',
+      english: 'Grateful',
+      chinese: 'gǎnjīde',
+    },
+    {
+      id: '0147',
+      english: 'Love',
+      chinese: 'Ài',
+    },
+    {
+      id: '0148',
+      english: 'Angry',
+      chinese: 'shēngqì',
+    },
+    {
+      id: '0149',
+      english: 'Annoyed',
+      chinese: 'nǎo huǒ',
+    },
+    {
+      id: '0150',
+      english: 'Sad',
+      chinese: 'bēi shāng',
+    },
+    {
+      id: '0151',
+      english: 'Hungry',
+      chinese: 'è',
+    },
+  ],
 };
