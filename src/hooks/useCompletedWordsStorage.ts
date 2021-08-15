@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
-const STORAGE_KEY = 'COMPLETED_WORDS';
+const STORAGE_KEYS = {
+  completedWords: 'COMPLETED_WORDS',
+  isFlipped: 'IS_FLIPPED',
+};
 
 export const useCompletedWordsStorage = () => {
-  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEY);
+  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEYS.completedWords);
   const [completedWords, setCompletedWords] = useState<string[]>([]);
 
   const loadFromStorage = async () => {
@@ -30,4 +33,40 @@ export const useCompletedWordsStorage = () => {
   }, []);
 
   return { getIsCompleted, toggleCompletedWord };
+};
+
+const TRUE = 'TRUE';
+const FALSE = 'FALSE';
+
+export const useIsFlippedStorage = () => {
+  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEYS.isFlipped);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const loadFromStorage = async () => {
+    setIsLoading(true);
+    const item = await loadItem();
+    if (item === FALSE) {
+      setIsFlipped(false);
+    } else {
+      setIsFlipped(true);
+    }
+    setIsLoading(false);
+  };
+
+  const toggleIsFlipped = async () => {
+    if (isFlipped) {
+      setIsFlipped(false);
+      await storeItem(FALSE);
+    } else {
+      setIsFlipped(true);
+      await storeItem(TRUE);
+    }
+  };
+
+  useEffect(() => {
+    loadFromStorage();
+  }, []);
+
+  return { isFlipped, isLoading, toggleIsFlipped };
 };
