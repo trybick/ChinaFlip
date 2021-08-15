@@ -1,6 +1,6 @@
 export type WordListID = '01' | '02' | '03' | '04' | '05' | '06' | '07' | '08';
 
-const WordListTitlesForDisplay: { [key in WordListID]: string } = {
+const wordListTitlesF: { [key in WordListID]: string } = {
   ['01']: 'Basics I',
   ['02']: 'Basics II',
   ['03']: 'Numbers',
@@ -11,7 +11,7 @@ const WordListTitlesForDisplay: { [key in WordListID]: string } = {
   ['08']: 'Emotions',
 };
 
-export const getTitleForDisplay = (id: WordListID) => WordListTitlesForDisplay[id];
+export const getTitleForDisplay = (id: WordListID) => wordListTitlesF[id];
 
 export type Word = {
   id: string;
