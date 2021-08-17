@@ -1,17 +1,21 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
-import { useLocation, useHistory } from 'react-router-native';
-import { Button, Card, Header, Icon } from 'react-native-elements';
-import styled from 'styled-components/native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { useLocation } from 'react-router-native';
+import { Button, Card, Icon } from 'react-native-elements';
 import { getTitleForDisplay, WordListID, Word as WordType } from 'database/helper';
 import { useCompletedWordsStorage, useIsFlippedStorage } from 'hooks/useCompletedWordsStorage';
+import Header from 'components/Header/Header';
 import WordRow from './WordRow';
-import { ROUTES } from 'utils/routes';
 
 type LocationState = { words: WordType[]; wordListID: WordListID };
 
+const FlipIcon = () => (
+  <>
+    <Icon color="white" name="arrow-swap" size={16} style={styles.flipIcon} type="fontisto" />
+  </>
+);
+
 export default function WordListPage() {
-  const history = useHistory();
   const {
     state: { words, wordListID },
   } = useLocation<LocationState>();
@@ -20,26 +24,16 @@ export default function WordListPage() {
 
   return (
     <View>
-      <Header
-        leftComponent={{
-          text: 'Back',
-          style: { color: '#fff' },
-          onPress: () => history.push(ROUTES.HOME),
-        }}
-        centerComponent={{ text: 'ChinaFlip', style: { color: '#fff' } }}
-      />
-
+      <Header showBackButton={true} />
       <ScrollView>
-        <PageContainer>
-          <Card containerStyle={{ width: '100%' }}>
-            <Card.Title>
-              <Text style={{ fontSize: 22 }}>{getTitleForDisplay(wordListID)}</Text>
-            </Card.Title>
+        <View style={styles.pageContainer}>
+          <Card containerStyle={styles.cardContainer}>
+            <Card.Title style={styles.cardTitle}>{getTitleForDisplay(wordListID)}</Card.Title>
             <Card.Divider />
             <Button
-              containerStyle={{ alignSelf: 'flex-end', marginBottom: 10, width: 40 }}
+              containerStyle={styles.flipButton}
               onPress={() => toggleIsFlipped()}
-              title={<FlipButtonContent />}
+              title={<FlipIcon />}
             />
 
             {!isLoading &&
@@ -53,21 +47,31 @@ export default function WordListPage() {
                 />
               ))}
           </Card>
-        </PageContainer>
+        </View>
       </ScrollView>
     </View>
   );
 }
 
-const PageContainer = styled.View`
-  background-color: white;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30%;
-`;
-
-const FlipButtonContent = () => (
-  <>
-    <Icon color="white" name="arrow-swap" size={16} style={{ marginLeft: 2 }} type="fontisto" />
-  </>
-);
+const styles = StyleSheet.create({
+  pageContainer: {
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: '30%',
+  },
+  cardContainer: {
+    width: '100%',
+  },
+  cardTitle: {
+    fontSize: 22,
+  },
+  flipButton: {
+    alignSelf: 'flex-end',
+    marginBottom: 10,
+    width: 40,
+  },
+  flipIcon: {
+    marginLeft: 2,
+  },
+});

@@ -1,6 +1,6 @@
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
-import styled from 'styled-components/native';
 import { Word as WordType } from 'database/helper';
 
 export default function WordRow({
@@ -15,22 +15,22 @@ export default function WordRow({
   word: WordType;
 }) {
   const englishWord = (
-    <Word>
+    <View style={styles.word}>
       <Text>{english}</Text>
-    </Word>
+    </View>
   );
 
   const chineseWord = (
-    <Word>
-      <Icon color="grey" name="volume-high" size={20} style={{ marginRight: 4 }} type="ionicon" />
-      <Text style={{ lineHeight: 20 }}>{chinese}</Text>
-    </Word>
+    <View style={styles.word}>
+      <Icon color="grey" name="volume-high" size={20} style={styles.audioIcon} type="ionicon" />
+      <Text style={styles.chineseText}>{chinese}</Text>
+    </View>
   );
 
   return (
     <>
-      <Row key={id} style={{ opacity: isCompleted ? 0.4 : 1 }}>
-        <WordsContainer>
+      <View key={id} style={[styles.row, isCompleted && styles.completedRow]}>
+        <View style={styles.wordsContainer}>
           {isFlipped ? (
             <>
               {chineseWord}
@@ -42,7 +42,7 @@ export default function WordRow({
               {chineseWord}
             </>
           )}
-        </WordsContainer>
+        </View>
 
         <Icon
           color="grey"
@@ -51,23 +51,32 @@ export default function WordRow({
           size={24}
           type="material-community"
         />
-      </Row>
+      </View>
       <Divider orientation="horizontal" />
     </>
   );
 }
 
-const Row = styled.View`
-  flex-direction: row;
-  margin-top: 5%;
-  margin-bottom: 4%;
-`;
-
-const WordsContainer = styled.View`
-  flex-direction: row;
-`;
-
-const Word = styled.View`
-  width: 46%;
-  flex-direction: row;
-`;
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row',
+    marginTop: '5%',
+    marginBottom: '4%',
+  },
+  completedRow: {
+    opacity: 0.4,
+  },
+  audioIcon: {
+    marginRight: 4,
+  },
+  wordsContainer: {
+    flexDirection: 'row',
+  },
+  word: {
+    width: '46%',
+    flexDirection: 'row',
+  },
+  chineseText: {
+    lineHeight: 20,
+  },
+});

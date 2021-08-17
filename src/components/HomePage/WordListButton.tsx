@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Button } from 'react-native-elements';
 import { getTitleForDisplay, WordListID, Word as WordType } from 'database/helper';
@@ -15,8 +16,8 @@ export default function WordListButton({
 
   return (
     <Button
-      buttonStyle={{ height: 100 }}
-      containerStyle={{ margin: 15, width: '40%' }}
+      buttonStyle={styles.button}
+      containerStyle={styles.container}
       onPress={() => history.push(`${ROUTES.WORD_LIST}/${wordListID}`, { words, wordListID })}
       title={getTitleForDisplay(wordListID)}
       type="outline"
@@ -24,3 +25,13 @@ export default function WordListButton({
     />
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    height: 100,
+  },
+  container: {
+    margin: 15,
+    width: '40%',
+  },
+});
