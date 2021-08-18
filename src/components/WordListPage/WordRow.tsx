@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
-import { Word as WordType } from 'database/helper';
+import { Word as WordType } from 'database/words/helper';
+import { playSound } from 'utils/soundPlayer';
 
 export default function WordRow({
   isCompleted,
@@ -22,7 +23,14 @@ export default function WordRow({
 
   const chineseWord = (
     <View style={styles.word}>
-      <Icon color="grey" name="volume-high" size={20} style={styles.audioIcon} type="ionicon" />
+      <Icon
+        color="grey"
+        name="volume-high"
+        onPress={() => playSound(id)}
+        size={20}
+        style={styles.audioIcon}
+        type="ionicon"
+      />
       <Text style={styles.chineseText}>{chinese}</Text>
     </View>
   );

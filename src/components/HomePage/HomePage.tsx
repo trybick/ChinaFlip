@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import WORDS from 'database/words';
-import { WordListID } from 'database/helper';
+import WordLibrary from 'database/words/WordLibrary';
+import { WordListID } from 'database/words/helper';
 import Header from '../Header/Header';
 import WordListButton from './WordListButton';
 
@@ -10,7 +10,7 @@ export default function HomePage() {
     <View>
       <Header />
       <View style={styles.pageContainer}>
-        {Object.entries(WORDS).map(([wordListID, words]) => (
+        {Object.entries(WordLibrary).map(([wordListID, words]) => (
           <WordListButton key={wordListID} wordListID={wordListID as WordListID} words={words} />
         ))}
       </View>

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
-const STORAGE_KEYS = {
+const STORAGE = {
   completedWords: 'COMPLETED_WORDS',
   isFlipped: 'IS_FLIPPED',
 };
 
 export const useCompletedWordsStorage = () => {
-  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEYS.completedWords);
+  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE.completedWords);
   const [completedWords, setCompletedWords] = useState<string[]>([]);
 
   const loadFromStorage = async () => {
@@ -39,7 +39,7 @@ const TRUE = 'TRUE';
 const FALSE = 'FALSE';
 
 export const useIsFlippedStorage = () => {
-  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE_KEYS.isFlipped);
+  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE.isFlipped);
   const [isLoading, setIsLoading] = useState(true);
   const [isFlipped, setIsFlipped] = useState(false);
 
