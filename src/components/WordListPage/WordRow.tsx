@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
 import { Word as WordType } from 'database/words/helper';
 import { playSound } from 'utils/soundPlayer';
@@ -7,21 +7,39 @@ import { playSound } from 'utils/soundPlayer';
 export default function WordRow({
   isCompleted,
   isFlipped,
+  isTranslationHidden,
   toggleCompletedWord,
   word: { id, chinese, english },
 }: {
   isCompleted: boolean;
   isFlipped: boolean;
+  isTranslationHidden: boolean;
   toggleCompletedWord: (id: string) => Promise<void>;
   word: WordType;
 }) {
-  const englishWord = (
+  const [isHiddenTranslationVisible, setIsHiddenTranslationVisible] = useState(false);
+
+  const onPressWord = () => {
+    setIsHiddenTranslationVisible(!isHiddenTranslationVisible);
+  };
+
+  const makeHiddenWord = (text: string) => Array(text.split('').length).fill('.');
+
+  const EnglishWord = ({ isHidden }: { isHidden?: boolean }) => (
     <View style={styles.word}>
-      <Text>{english}</Text>
+      <TouchableOpacity
+        style={styles.touchableWord}
+        {...(isFlipped && { onPress: onPressWord })}
+        {...(!isFlipped && { activeOpacity: 1 })}
+      >
+        <Text style={isHidden && styles.hiddenText}>
+          {isHidden ? makeHiddenWord(english) : english}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 
-  const chineseWord = (
+  const ChineseWord = ({ isHidden }: { isHidden?: boolean }) => (
     <View style={styles.word}>
       <Icon
         color="grey"
@@ -31,7 +49,15 @@ export default function WordRow({
         style={styles.audioIcon}
         type="ionicon"
       />
-      <Text style={styles.chineseText}>{chinese}</Text>
+      <TouchableOpacity
+        style={styles.touchableWord}
+        {...(!isFlipped && { onPress: onPressWord })}
+        {...(isFlipped && { activeOpacity: 1 })}
+      >
+        <Text style={[styles.chineseText, isHidden && styles.hiddenText]}>
+          {isHidden ? makeHiddenWord(chinese) : chinese}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 
@@ -41,13 +67,13 @@ export default function WordRow({
         <View style={styles.wordsContainer}>
           {isFlipped ? (
             <>
-              {chineseWord}
-              {englishWord}
+              <ChineseWord />
+              <EnglishWord isHidden={isTranslationHidden && !isHiddenTranslationVisible} />
             </>
           ) : (
             <>
-              {englishWord}
-              {chineseWord}
+              <EnglishWord />
+              <ChineseWord isHidden={isTranslationHidden && !isHiddenTranslationVisible} />
             </>
           )}
         </View>
@@ -83,6 +109,12 @@ const styles = StyleSheet.create({
   word: {
     width: '46%',
     flexDirection: 'row',
+  },
+  touchableWord: {
+    flexDirection: 'row',
+  },
+  hiddenText: {
+    letterSpacing: 2,
   },
   chineseText: {
     lineHeight: 20,

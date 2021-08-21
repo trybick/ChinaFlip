@@ -4,6 +4,7 @@ import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 const STORAGE = {
   completedWords: 'COMPLETED_WORDS',
   isFlipped: 'IS_FLIPPED',
+  isTranslationHidden: 'IS_TRANSLATION_HIDDEN',
 };
 
 export const useCompletedWordsStorage = () => {
@@ -68,5 +69,38 @@ export const useIsFlippedStorage = () => {
     loadFromStorage();
   }, []);
 
-  return { isFlipped, isLoading, toggleIsFlipped };
+  return { isFlipped, isLoadingIsFlipped: isLoading, toggleIsFlipped };
+};
+
+export const useIsTranslationHiddenStorage = () => {
+  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE.isTranslationHidden);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isTranslationHidden, setIsTranslationHidden] = useState(false);
+
+  const loadFromStorage = async () => {
+    setIsLoading(true);
+    const item = await loadItem();
+    if (item === FALSE) {
+      setIsTranslationHidden(false);
+    } else {
+      setIsTranslationHidden(true);
+    }
+    setIsLoading(false);
+  };
+
+  const toggleIsTranslationHidden = async () => {
+    if (isTranslationHidden) {
+      setIsTranslationHidden(false);
+      await storeItem(FALSE);
+    } else {
+      setIsTranslationHidden(true);
+      await storeItem(TRUE);
+    }
+  };
+
+  useEffect(() => {
+    loadFromStorage();
+  }, []);
+
+  return { isLoadingTranslationHidden: isLoading, isTranslationHidden, toggleIsTranslationHidden };
 };
