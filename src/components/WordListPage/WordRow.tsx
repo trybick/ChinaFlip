@@ -32,7 +32,7 @@ export default function WordRow({
         {...(isFlipped && { onPress: onPressWord })}
         {...(!isFlipped && { activeOpacity: 1 })}
       >
-        <Text style={isHidden && styles.hiddenText}>
+        <Text style={[styles.englishText, isHidden && styles.hiddenText]}>
           {isHidden ? makeHiddenWord(english) : english}
         </Text>
       </TouchableOpacity>
@@ -46,7 +46,6 @@ export default function WordRow({
         name="volume-high"
         onPress={() => playSound(id)}
         size={20}
-        style={styles.audioIcon}
         type="ionicon"
       />
       <TouchableOpacity
@@ -94,14 +93,11 @@ export default function WordRow({
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    marginTop: '5%',
-    marginBottom: '4%',
+    marginTop: 20,
+    marginBottom: 18,
   },
   completedRow: {
     opacity: 0.4,
-  },
-  audioIcon: {
-    marginRight: 4,
   },
   wordsContainer: {
     flexDirection: 'row',
@@ -116,7 +112,12 @@ const styles = StyleSheet.create({
   hiddenText: {
     letterSpacing: 2,
   },
+  englishText: {
+    fontSize: 17,
+  },
   chineseText: {
-    lineHeight: 20,
+    marginLeft: 4,
+    fontSize: 17,
+    lineHeight: 21,
   },
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { useLocation } from 'react-router-native';
-import { Card, FAB, Icon, Switch, Text } from 'react-native-elements';
+import { Button, Card, Icon, Switch, Text } from 'react-native-elements';
 import { getTitleForDisplay, WordListID, Word as WordType } from 'database/words/helper';
 import {
   useCompletedWordsStorage,
@@ -14,9 +14,7 @@ import WordRow from './WordRow';
 type LocationState = { words: WordType[]; wordListID: WordListID };
 
 const FlipIcon = () => (
-  <>
-    <Icon color="white" name="arrow-swap" size={14} style={styles.flipIcon} type="fontisto" />
-  </>
+  <Icon color="white" name="arrow-swap" size={12} style={styles.flipIcon} type="fontisto" />
 );
 
 export default function WordListPage() {
@@ -38,35 +36,38 @@ export default function WordListPage() {
             <Card.Divider />
 
             <View style={styles.buttonsWrapper}>
-              <Text style={styles.hideTranslationText}>Hide Translation</Text>
-              <Switch
-                onValueChange={toggleIsTranslationHidden}
-                style={styles.switch}
-                value={isTranslationHidden}
-              />
+              <View style={styles.hideTranslation}>
+                <Switch
+                  onValueChange={toggleIsTranslationHidden}
+                  style={styles.switch}
+                  value={isTranslationHidden}
+                />
+                <Text style={styles.hideTranslationText}>Hide Translation</Text>
+              </View>
 
-              <FAB
-                color="#2089dc"
+              <Button
                 containerStyle={styles.flipButton}
                 icon={<FlipIcon />}
-                onPress={toggleIsFlipped}
-                size="small"
-                title="Flip"
+                onPress={() => toggleIsFlipped()}
+                title={<Text style={styles.flipText}>Flip</Text>}
               />
             </View>
 
-            {!isLoadingIsFlipped &&
-              !isLoadingTranslationHidden &&
-              words.map(word => (
-                <WordRow
-                  key={word.id}
-                  isCompleted={getIsCompleted(word.id)}
-                  isFlipped={isFlipped}
-                  isTranslationHidden={isTranslationHidden}
-                  toggleCompletedWord={toggleCompletedWord}
-                  word={word}
-                />
-              ))}
+            <Card.Divider />
+            <View style={styles.wordsContainer}>
+              {!isLoadingIsFlipped &&
+                !isLoadingTranslationHidden &&
+                words.map(word => (
+                  <WordRow
+                    key={word.id}
+                    isCompleted={getIsCompleted(word.id)}
+                    isFlipped={isFlipped}
+                    isTranslationHidden={isTranslationHidden}
+                    toggleCompletedWord={toggleCompletedWord}
+                    word={word}
+                  />
+                ))}
+            </View>
           </Card>
         </View>
       </ScrollView>
@@ -89,21 +90,30 @@ const styles = StyleSheet.create({
   },
   buttonsWrapper: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     marginBottom: 10,
   },
+  hideTranslation: {
+    flexDirection: 'row',
+  },
   hideTranslationText: {
-    textAlignVertical: 'center',
+    alignSelf: 'center',
   },
   switch: {
-    marginRight: 16,
-    transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }],
+    transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }],
   },
   flipButton: {
-    // alignSelf: 'flex-end',
-    // height: 40,
+    width: 60,
+    marginRight: 4,
   },
   flipIcon: {
-    marginLeft: 2,
+    marginRight: 3,
+  },
+  flipText: {
+    color: '#fff',
+  },
+  wordsContainer: {
+    paddingLeft: 8,
+    paddingRight: 8,
   },
 });
