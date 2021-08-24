@@ -1,4 +1,4 @@
-import { Database } from './helper';
+import { Database } from 'utils/wordsHelper';
 
 export default <Database>{
   '01': [

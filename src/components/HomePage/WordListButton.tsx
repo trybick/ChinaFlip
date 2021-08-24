@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Button } from 'react-native-elements';
-import { getTitleForDisplay, WordListID, Word as WordType } from 'database/words/helper';
+import { getTitleForDisplay, WordListID, Word as WordType } from 'utils/wordsHelper';
 import { ROUTES } from 'utils/routes';
 
 export default function WordListButton({

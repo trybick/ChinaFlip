@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import WordLibrary from 'database/words/WordLibrary';
-import { WordListID } from 'database/words/helper';
+import { WordListID } from 'utils/wordsHelper';
 import Header from '../Header/Header';
 import WordListButton from './WordListButton';
 

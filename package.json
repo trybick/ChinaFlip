@@ -7,8 +7,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "clean": "rm -rf node_modules && yarn",
-    "buildSounds": "node scripts/buildsounds.js"
+    "clean": "rm -rf node_modules && yarn"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
-import { Word as WordType } from 'database/words/helper';
+import { Word as WordType } from 'utils/wordsHelper';
 import { playSound } from 'utils/soundPlayer';
 
 export default function WordRow({

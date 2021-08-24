@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { useLocation } from 'react-router-native';
 import { Button, Card, Icon, Switch, Text } from 'react-native-elements';
-import { getTitleForDisplay, WordListID, Word as WordType } from 'database/words/helper';
+import { getTitleForDisplay, WordListID, Word as WordType } from 'utils/wordsHelper';
 import {
   useCompletedWordsStorage,
   useIsFlippedStorage,
