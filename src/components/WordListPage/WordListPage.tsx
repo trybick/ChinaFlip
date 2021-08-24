@@ -44,7 +44,6 @@ export default function WordListPage() {
                 />
                 <Text style={styles.hideTranslationText}>Hide Translation</Text>
               </View>
-
               <Button
                 containerStyle={styles.flipButton}
                 icon={<FlipIcon />}
@@ -98,11 +97,13 @@ const styles = StyleSheet.create({
   },
   hideTranslationText: {
     alignSelf: 'center',
+    fontSize: 13,
   },
   switch: {
     transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }],
   },
   flipButton: {
+    height: 32,
     width: 60,
     marginRight: 4,
   },
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   wordsContainer: {
-    paddingLeft: 8,
-    paddingRight: 8,
+    paddingLeft: 3,
+    paddingRight: 6,
   },
 });

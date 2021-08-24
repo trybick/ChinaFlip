@@ -26,7 +26,7 @@ export default function WordRow({
   const makeHiddenWord = (text: string) => Array(text.split('').length).fill('.');
 
   const EnglishWord = ({ isHidden }: { isHidden?: boolean }) => (
-    <View style={styles.word}>
+    <View style={styles.wordWrapper}>
       <TouchableOpacity
         style={styles.touchableWord}
         {...(isFlipped && { onPress: onPressWord })}
@@ -40,19 +40,19 @@ export default function WordRow({
   );
 
   const ChineseWord = ({ isHidden }: { isHidden?: boolean }) => (
-    <View style={styles.word}>
-      <Icon
-        color="grey"
-        name="volume-high"
-        onPress={() => playSound(id)}
-        size={20}
-        type="ionicon"
-      />
+    <View style={styles.wordWrapper}>
       <TouchableOpacity
         style={styles.touchableWord}
         {...(!isFlipped && { onPress: onPressWord })}
         {...(isFlipped && { activeOpacity: 1 })}
       >
+        <Icon
+          color="grey"
+          name="volume-high"
+          onPress={() => playSound(id)}
+          size={20}
+          type="ionicon"
+        />
         <Text style={[styles.chineseText, isHidden && styles.hiddenText]}>
           {isHidden ? makeHiddenWord(chinese) : chinese}
         </Text>
@@ -102,22 +102,25 @@ const styles = StyleSheet.create({
   wordsContainer: {
     flexDirection: 'row',
   },
-  word: {
-    width: '46%',
+  wordWrapper: {
+    width: '47%',
     flexDirection: 'row',
   },
   touchableWord: {
     flexDirection: 'row',
   },
-  hiddenText: {
-    letterSpacing: 2,
-  },
   englishText: {
-    fontSize: 17,
+    fontSize: 16,
+    lineHeight: 23,
+    width: '95%',
   },
   chineseText: {
-    marginLeft: 4,
-    fontSize: 17,
-    lineHeight: 21,
+    fontSize: 16,
+    lineHeight: 23,
+    width: '82%',
+    marginLeft: 2,
+  },
+  hiddenText: {
+    letterSpacing: 2,
   },
 });
