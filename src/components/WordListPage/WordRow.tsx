@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 23,
     width: '82%',
-    marginLeft: 2,
+    marginLeft: 1,
   },
   hiddenText: {
     letterSpacing: 2,
