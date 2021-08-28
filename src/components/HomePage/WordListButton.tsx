@@ -20,6 +20,7 @@ export default function WordListButton({
       containerStyle={styles.container}
       onPress={() => history.push(`${ROUTES.WORD_LIST}/${wordListID}`, { words, wordListID })}
       title={getTitleForDisplay(wordListID)}
+      titleStyle={styles.buttonTitle}
       type="outline"
       raised
     />
@@ -33,5 +34,8 @@ const styles = StyleSheet.create({
   container: {
     margin: 15,
     width: '40%',
+  },
+  buttonTitle: {
+    color: '#2196f3',
   },
 });

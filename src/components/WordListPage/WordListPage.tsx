@@ -45,9 +45,10 @@ export default function WordListPage() {
                 <Text style={styles.hideTranslationText}>Hide Translation</Text>
               </View>
               <Button
-                containerStyle={styles.flipButton}
+                buttonStyle={styles.flipButtonButton}
+                containerStyle={styles.flipButtonContainer}
                 icon={<FlipIcon />}
-                onPress={() => toggleIsFlipped()}
+                onPress={toggleIsFlipped}
                 title={<Text style={styles.flipText}>Flip</Text>}
               />
             </View>
@@ -102,10 +103,13 @@ const styles = StyleSheet.create({
   switch: {
     transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }],
   },
-  flipButton: {
+  flipButtonContainer: {
     height: 32,
     width: 60,
     marginRight: 4,
+  },
+  flipButtonButton: {
+    backgroundColor: '#2196f3',
   },
   flipIcon: {
     marginRight: 3,
