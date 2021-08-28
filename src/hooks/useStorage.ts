@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
+const TRUE = 'TRUE';
+const FALSE = 'FALSE';
+
 const STORAGE = {
   completedWords: 'COMPLETED_WORDS',
   isFlipped: 'IS_FLIPPED',
@@ -8,12 +11,14 @@ const STORAGE = {
 };
 
 export const useCompletedWordsStorage = () => {
-  const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE.completedWords);
+  const { getItem: loadCompletedWords, setItem: storeCompletedWords } = useAsyncStorage(
+    STORAGE.completedWords
+  );
   const [completedWords, setCompletedWords] = useState<string[]>([]);
 
   const loadFromStorage = async () => {
-    const item = await loadItem();
-    setCompletedWords(item && JSON.parse(item));
+    const completedWords = await loadCompletedWords();
+    completedWords && setCompletedWords(JSON.parse(completedWords));
   };
 
   const toggleCompletedWord = async (id: string) => {
@@ -24,7 +29,7 @@ export const useCompletedWordsStorage = () => {
       updatedArray = [...(completedWords || []), id];
     }
     setCompletedWords(updatedArray);
-    await storeItem(JSON.stringify(updatedArray));
+    await storeCompletedWords(JSON.stringify(updatedArray));
   };
 
   const getIsCompleted = (id: string) => completedWords?.includes(id);
@@ -36,9 +41,6 @@ export const useCompletedWordsStorage = () => {
   return { getIsCompleted, toggleCompletedWord };
 };
 
-const TRUE = 'TRUE';
-const FALSE = 'FALSE';
-
 export const useIsFlippedStorage = () => {
   const { getItem: loadItem, setItem: storeItem } = useAsyncStorage(STORAGE.isFlipped);
   const [isLoading, setIsLoading] = useState(true);
@@ -47,10 +49,10 @@ export const useIsFlippedStorage = () => {
   const loadFromStorage = async () => {
     setIsLoading(true);
     const item = await loadItem();
-    if (item === FALSE) {
-      setIsFlipped(false);
-    } else {
+    if (item === TRUE) {
       setIsFlipped(true);
+    } else {
+      setIsFlipped(false);
     }
     setIsLoading(false);
   };
@@ -80,10 +82,10 @@ export const useIsTranslationHiddenStorage = () => {
   const loadFromStorage = async () => {
     setIsLoading(true);
     const item = await loadItem();
-    if (item === FALSE) {
-      setIsTranslationHidden(false);
-    } else {
+    if (item === TRUE) {
       setIsTranslationHidden(true);
+    } else {
+      setIsTranslationHidden(false);
     }
     setIsLoading(false);
   };
