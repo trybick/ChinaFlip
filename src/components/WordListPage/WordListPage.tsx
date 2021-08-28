@@ -7,7 +7,7 @@ import {
   useCompletedWordsStorage,
   useIsFlippedStorage,
   useIsTranslationHiddenStorage,
-} from 'hooks/useCompletedWordsStorage';
+} from 'hooks/useStorage';
 import Header from 'components/Header/Header';
 import WordRow from './WordRow';
 
