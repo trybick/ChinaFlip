@@ -11,6 +11,7 @@ export default function Header({ showBackButton }: { showBackButton?: boolean })
 
   return showBackButton ? (
     <HeaderComponent
+      backgroundColor="#2196f3"
       leftComponent={{
         text: 'Back',
         style: styles.text,
@@ -19,7 +20,7 @@ export default function Header({ showBackButton }: { showBackButton?: boolean })
       centerComponent={{ text, style: styles.text }}
     />
   ) : (
-    <HeaderComponent centerComponent={{ text, style: styles.text }} />
+    <HeaderComponent backgroundColor="#2196f3" centerComponent={{ text, style: styles.text }} />
   );
 }
 
