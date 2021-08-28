@@ -1,14 +1,16 @@
 {
   "expo": {
-    "name": "ChinaFlip",
+    "name": "China Flip",
     "slug": "china-flip",
+    "description": "Learn the most common Chinese words and phrases with native speaker audio",
+    "privacy": "unlisted",
     "version": "0.0.1",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2196f3"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -16,12 +18,6 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
     }
   }
 }
