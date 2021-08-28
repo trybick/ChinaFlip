@@ -8,19 +8,19 @@ const text = 'ChinaFlip';
 
 export default function Header({ showBackButton }: { showBackButton?: boolean }) {
   const history = useHistory();
+  const commonProps = { backgroundColor: '#2196f3', centerComponent: { text, style: styles.text } };
 
   return showBackButton ? (
     <HeaderComponent
-      backgroundColor="#2196f3"
       leftComponent={{
         text: 'Back',
         style: styles.text,
         onPress: () => history.push(ROUTES.HOME),
       }}
-      centerComponent={{ text, style: styles.text }}
+      {...commonProps}
     />
   ) : (
-    <HeaderComponent backgroundColor="#2196f3" centerComponent={{ text, style: styles.text }} />
+    <HeaderComponent {...commonProps} />
   );
 }
 
