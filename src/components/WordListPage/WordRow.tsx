@@ -48,6 +48,7 @@ export default function WordRow({
       >
         <Icon
           color="grey"
+          containerStyle={styles.volumeIconContainer}
           name="volume"
           onPress={() => playSound(id)}
           size={18}
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     marginTop: 20,
-    marginBottom: 18,
+    marginBottom: 20,
   },
   completedRow: {
     opacity: 0.4,
@@ -110,15 +111,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   englishText: {
+    alignSelf: 'center',
     fontSize: 16,
-    lineHeight: 23,
     width: '95%',
   },
   chineseText: {
+    alignSelf: 'center',
     fontSize: 16,
-    lineHeight: 23,
     width: '82%',
-    marginLeft: 1,
+    marginLeft: 5,
+  },
+  volumeIconContainer: {
+    alignSelf: 'center',
   },
   hiddenText: {
     letterSpacing: 2,
