@@ -48,10 +48,10 @@ export default function WordRow({
       >
         <Icon
           color="grey"
-          name="volume-high"
+          name="volume"
           onPress={() => playSound(id)}
-          size={20}
-          type="ionicon"
+          size={18}
+          type="foundation"
         />
         <Text style={[styles.chineseText, isHidden && styles.hiddenText]}>
           {isHidden ? makeHiddenWord(chinese) : chinese}
