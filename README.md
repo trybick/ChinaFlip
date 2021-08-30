@@ -1,11 +1,25 @@
-# ChinaFlip
+# China Flip
 
-Learn Chinese words and phrases.
+> Android and iOS app to learn the most common Chinese words and phrases with native speaker audio
+
+# Demo
+
+<p align="center">
+<img src="./demo.png" width="300px"/>
+</p>
+
+## Technologies
+
+- Expo
+- React
+- TypeScript
+- React Native Elements
 
 ## Local Development
 
 To run locally:
 
 ```terminal
+yarn
 yarn start
 ```
