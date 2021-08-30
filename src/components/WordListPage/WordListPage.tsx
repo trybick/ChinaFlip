@@ -36,13 +36,15 @@ export default function WordListPage() {
             <Card.Divider />
 
             <View style={styles.buttonsWrapper}>
-              <View style={styles.hideTranslation}>
+              <View style={styles.hideTranslationContainer}>
                 <Switch
                   onValueChange={toggleIsTranslationHidden}
                   style={styles.switch}
                   value={isTranslationHidden}
                 />
-                <Text style={styles.hideTranslationText}>Hide Translation</Text>
+                <Text onPress={toggleIsTranslationHidden} style={styles.hideTranslationText}>
+                  Hide Translation
+                </Text>
               </View>
               <Button
                 buttonStyle={styles.flipButtonButton}
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 10,
   },
-  hideTranslation: {
+  hideTranslationContainer: {
     flexDirection: 'row',
   },
   hideTranslationText: {

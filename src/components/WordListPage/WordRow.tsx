@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 20,
-    marginBottom: 19,
+    marginBottom: 18,
   },
   completedRow: {
     opacity: 0.4,
