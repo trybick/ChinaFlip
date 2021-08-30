@@ -104,12 +104,12 @@ const styles = StyleSheet.create({
     transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }],
   },
   flipButtonContainer: {
-    height: 32,
-    width: 60,
     marginRight: 4,
   },
   flipButtonButton: {
     backgroundColor: '#2196f3',
+    height: 32,
+    width: 64,
   },
   flipIcon: {
     marginRight: 3,
