@@ -20,7 +20,7 @@ export default function WordRow({
   const [isHiddenTranslationVisible, setIsHiddenTranslationVisible] = useState(false);
 
   const onPressWord = () => {
-    setIsHiddenTranslationVisible(!isHiddenTranslationVisible);
+    isTranslationHidden && setIsHiddenTranslationVisible(!isHiddenTranslationVisible);
   };
 
   const makeHiddenWord = (text: string) => Array(text.split('').length).fill('.');
