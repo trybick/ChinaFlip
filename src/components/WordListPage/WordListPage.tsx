@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   buttonsWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    marginBottom: 14,
   },
   hideTranslationContainer: {
     flexDirection: 'row',

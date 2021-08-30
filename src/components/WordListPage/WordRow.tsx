@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     width: '82%',
   },
   volumeIconIcon: {
-    padding: 5,
+    padding: 6,
   },
   hiddenText: {
     letterSpacing: 2,
