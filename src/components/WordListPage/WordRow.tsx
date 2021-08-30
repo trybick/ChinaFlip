@@ -79,6 +79,7 @@ export default function WordRow({
 
         <Icon
           color="grey"
+          containerStyle={styles.checkboxIconContainer}
           name={isCompleted ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
           onPress={() => toggleCompletedWord(id)}
           size={24}
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     marginTop: 20,
-    marginBottom: 20,
+    marginBottom: 19,
   },
   completedRow: {
     opacity: 0.4,
@@ -124,5 +125,8 @@ const styles = StyleSheet.create({
   },
   hiddenText: {
     letterSpacing: 2,
+  },
+  checkboxIconContainer: {
+    alignSelf: 'center',
   },
 });
