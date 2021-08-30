@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
 import { Word as WordType } from 'utils/wordsHelper';
@@ -20,8 +20,14 @@ export default function WordRow({
   const [isHiddenTranslationVisible, setIsHiddenTranslationVisible] = useState(false);
 
   const onPressWord = () => {
-    isTranslationHidden && setIsHiddenTranslationVisible(!isHiddenTranslationVisible);
+    if (isTranslationHidden) {
+      setIsHiddenTranslationVisible(!isHiddenTranslationVisible);
+    }
   };
+
+  useEffect(() => {
+    setIsHiddenTranslationVisible(false);
+  }, [isTranslationHidden, isFlipped, isCompleted]);
 
   const makeHiddenWord = (text: string) => Array(text.split('').length).fill('.');
 
