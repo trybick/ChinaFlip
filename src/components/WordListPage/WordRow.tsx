@@ -45,7 +45,6 @@ export default function WordRow({
     <View style={styles.wordWrapper}>
       <Icon
         color="grey"
-        containerStyle={styles.volumeIconContainer}
         iconStyle={styles.volumeIconIcon}
         name="volume"
         onPress={() => playSound(id)}
@@ -79,7 +78,6 @@ export default function WordRow({
 
         <Icon
           color="grey"
-          containerStyle={styles.checkboxIconContainer}
           name={isCompleted ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
           onPress={() => toggleCompletedWord(id)}
           size={24}
@@ -94,6 +92,7 @@ export default function WordRow({
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
+    alignItems: 'center',
     marginTop: 20,
     marginBottom: 19,
   },
@@ -106,27 +105,20 @@ const styles = StyleSheet.create({
   wordWrapper: {
     width: '47%',
     flexDirection: 'row',
+    alignItems: 'center',
   },
   englishText: {
-    alignSelf: 'center',
     fontSize: 16,
     width: '95%',
   },
   chineseText: {
-    alignSelf: 'center',
     fontSize: 16,
     width: '82%',
-  },
-  volumeIconContainer: {
-    alignSelf: 'center',
   },
   volumeIconIcon: {
     padding: 5,
   },
   hiddenText: {
     letterSpacing: 2,
-  },
-  checkboxIconContainer: {
-    alignSelf: 'center',
   },
 });
