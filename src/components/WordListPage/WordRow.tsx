@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
 import { Word as WordType } from 'utils/wordsHelper';
 import { playSound } from 'utils/soundPlayer';
@@ -33,37 +33,30 @@ export default function WordRow({
 
   const EnglishWord = ({ isHidden }: { isHidden?: boolean }) => (
     <View style={styles.wordWrapper}>
-      <TouchableOpacity
-        style={styles.touchableWord}
-        {...(isFlipped && { onPress: onPressWord })}
-        {...(!isFlipped && { activeOpacity: 1 })}
-      >
+      <TouchableWithoutFeedback {...(isFlipped && { onPress: onPressWord })}>
         <Text style={[styles.englishText, isHidden && styles.hiddenText]}>
           {isHidden ? makeHiddenWord(english) : english}
         </Text>
-      </TouchableOpacity>
+      </TouchableWithoutFeedback>
     </View>
   );
 
   const ChineseWord = ({ isHidden }: { isHidden?: boolean }) => (
     <View style={styles.wordWrapper}>
-      <TouchableOpacity
-        style={styles.touchableWord}
-        {...(!isFlipped && { onPress: onPressWord })}
-        {...(isFlipped && { activeOpacity: 1 })}
-      >
-        <Icon
-          color="grey"
-          containerStyle={styles.volumeIconContainer}
-          name="volume"
-          onPress={() => playSound(id)}
-          size={18}
-          type="foundation"
-        />
+      <Icon
+        color="grey"
+        containerStyle={styles.volumeIconContainer}
+        iconStyle={styles.volumeIconIcon}
+        name="volume"
+        onPress={() => playSound(id)}
+        size={19}
+        type="foundation"
+      />
+      <TouchableWithoutFeedback {...(!isFlipped && { onPress: onPressWord })}>
         <Text style={[styles.chineseText, isHidden && styles.hiddenText]}>
           {isHidden ? makeHiddenWord(chinese) : chinese}
         </Text>
-      </TouchableOpacity>
+      </TouchableWithoutFeedback>
     </View>
   );
 
@@ -113,9 +106,6 @@ const styles = StyleSheet.create({
     width: '47%',
     flexDirection: 'row',
   },
-  touchableWord: {
-    flexDirection: 'row',
-  },
   englishText: {
     alignSelf: 'center',
     fontSize: 16,
@@ -125,10 +115,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontSize: 16,
     width: '82%',
-    marginLeft: 5,
   },
   volumeIconContainer: {
     alignSelf: 'center',
+  },
+  volumeIconIcon: {
+    padding: 5,
   },
   hiddenText: {
     letterSpacing: 2,
