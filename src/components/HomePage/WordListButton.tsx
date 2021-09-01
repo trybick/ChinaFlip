@@ -29,11 +29,12 @@ export default function WordListButton({
 
 const styles = StyleSheet.create({
   button: {
-    height: 100,
+    height: 50,
   },
   container: {
     margin: 15,
-    width: '40%',
+    minWidth: 160,
+    maxWidth: 300,
   },
   buttonTitle: {
     color: '#2196f3',
