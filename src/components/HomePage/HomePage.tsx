@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react';
-import { Alert, BackHandler, StyleSheet, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import WordLibrary from 'database/words/WordLibrary';
 import { WordListID } from 'utils/wordsHelper';
+import { useBackButtonHandler } from 'hooks/useBackButtonHandler';
 import Header from '../Header/Header';
 import WordListButton from './WordListButton';
 
 export default function HomePage() {
-  useEffect(() => {
-    const backAction = () => {
-      BackHandler.exitApp();
-      return true;
-    };
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-    return () => backHandler.remove();
-  }, []);
+  useBackButtonHandler();
 
   return (
     <View>
