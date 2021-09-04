@@ -1,6 +1,572 @@
 import { Database } from 'utils/wordsHelper';
 
 export default <Database>{
+  '10': [
+    {
+      id: '0178',
+      english: 'Guitar',
+      chinese: 'Jítā',
+    },
+    {
+      id: '0179',
+      english: 'Piano',
+      chinese: 'Gāngqín',
+    },
+    {
+      id: '0180',
+      english: 'Drums',
+      chinese: 'Gǔ',
+    },
+    {
+      id: '0181',
+      english: 'Violin',
+      chinese: 'Xiǎotíqín',
+    },
+    {
+      id: '0182',
+      english: 'Cello',
+      chinese: 'Dàtíqín',
+    },
+    {
+      id: '0183',
+      english: 'Harp',
+      chinese: 'Shùqín',
+    },
+    {
+      id: '0184',
+      english: 'Trumpet',
+      chinese: 'Lǎbā',
+    },
+    {
+      id: '0185',
+      english: 'Trombone',
+      chinese: 'Cháng hào',
+    },
+    {
+      id: '0186',
+      english: 'Flute',
+      chinese: 'Chángdí',
+    },
+    {
+      id: '0187',
+      english: 'I play piano',
+      chinese: 'Wǒ dàn gāngqín',
+    },
+    {
+      id: '0188',
+      english: 'I play guitar',
+      chinese: 'Wǒ dàn jítā',
+    },
+    {
+      id: '0189',
+      english: 'Sheet music',
+      chinese: 'Yuèpǔ',
+    },
+    {
+      id: '0190',
+      english: 'Microphone',
+      chinese: 'Màikèfēng',
+    },
+  ],
+  '11': [
+    {
+      id: '0191',
+      english: 'Money',
+      chinese: 'Qián',
+    },
+    {
+      id: '0192',
+      english: 'Coin',
+      chinese: 'Yìngbì',
+    },
+    {
+      id: '0193',
+      english: 'Bank',
+      chinese: 'Yín háng',
+    },
+    {
+      id: '0194',
+      english: 'Credit card',
+      chinese: 'Xìn yòng kǎ',
+    },
+    {
+      id: '0195',
+      english: 'Price',
+      chinese: 'Jià ian',
+    },
+    {
+      id: '0196',
+      english: 'To pay',
+      chinese: 'Fù',
+    },
+    {
+      id: '0197',
+      english: 'Give change',
+      chinese: 'Líng qián',
+    },
+    {
+      id: '0198',
+      english: 'ATM',
+      chinese: 'Zì dòng qǔ kuǎn jī',
+    },
+    {
+      id: '0199',
+      english: 'Exchange rate',
+      chinese: 'Huì lǜ',
+    },
+    {
+      id: '0200',
+      english: 'How much does it cost?',
+      chinese: 'Tā yào duōshǎo qián?',
+    },
+    {
+      id: '0201',
+      english: 'US dollar',
+      chinese: 'Měi yuán',
+    },
+    {
+      id: '0202',
+      english: 'Chinese yuan',
+      chinese: 'Yuán',
+    },
+    {
+      id: '0203',
+      english: 'Wallet',
+      chinese: 'Qián bāo',
+    },
+  ],
+  '12': [
+    {
+      id: '0204',
+      english: 'America',
+      chinese: 'Měi guó',
+    },
+    {
+      id: '0205',
+      english: 'Canada',
+      chinese: 'Jiā ná dà',
+    },
+    {
+      id: '0206',
+      english: 'Mexico',
+      chinese: 'Mò xī gē',
+    },
+    {
+      id: '0207',
+      english: 'China',
+      chinese: 'Zhōng guó',
+    },
+    {
+      id: '0208',
+      english: 'Taiwan',
+      chinese: 'Tái wān',
+    },
+    {
+      id: '0209',
+      english: 'Hong Kong',
+      chinese: 'Xiāng gǎng',
+    },
+    {
+      id: '0210',
+      english: 'Macau',
+      chinese: 'Àomén',
+    },
+    {
+      id: '0211',
+      english: 'United Kingdom',
+      chinese: 'Yīng guó',
+    },
+    {
+      id: '0212',
+      english: 'Ireland',
+      chinese: "Ài'ěrlán",
+    },
+    {
+      id: '0213',
+      english: 'France',
+      chinese: 'Fà guó',
+    },
+    {
+      id: '0214',
+      english: 'Germany',
+      chinese: 'Dé guó',
+    },
+    {
+      id: '0215',
+      english: 'Spain',
+      chinese: 'Xī bān yá',
+    },
+    {
+      id: '0216',
+      english: 'Italy',
+      chinese: 'Yì dà lì',
+    },
+    {
+      id: '0217',
+      english: 'Poland',
+      chinese: 'Bō lán',
+    },
+    {
+      id: '0218',
+      english: 'Japan',
+      chinese: 'Rì běn',
+    },
+    {
+      id: '0219',
+      english: 'India',
+      chinese: 'Yìn dù',
+    },
+  ],
+  '13': [
+    {
+      id: '0220',
+      english: 'Who',
+      chinese: 'Shéi',
+    },
+    {
+      id: '0221',
+      english: 'What',
+      chinese: 'Shén me',
+    },
+    {
+      id: '0222',
+      english: 'Where',
+      chinese: 'Nǎ lǐ',
+    },
+    {
+      id: '0223',
+      english: 'Why',
+      chinese: 'Wèi shén me',
+    },
+    {
+      id: '0224',
+      english: 'When',
+      chinese: 'Shén me shí hou',
+    },
+    {
+      id: '0225',
+      english: 'How',
+      chinese: 'Zěn me',
+    },
+    {
+      id: '0226',
+      english: 'Which',
+      chinese: 'Nǎ ge',
+    },
+    {
+      id: '0227',
+      english: 'What’s your name?',
+      chinese: 'Nín jiào shénme míngzi？',
+    },
+    {
+      id: '0228',
+      english: 'Where do you live?',
+      chinese: 'Nín zhù zài nǎ lǐ？',
+    },
+    {
+      id: '0229',
+      english: 'What is this?',
+      chinese: 'Zhè shì shénme?',
+    },
+    {
+      id: '0230',
+      english: 'What are you thinking?',
+      chinese: 'Nǐ zài xiǎng shénme?',
+    },
+    {
+      id: '0231',
+      english: 'What do you want to do tomorrow?',
+      chinese: 'Nǐ míngtiān xiǎng zuò shénme?',
+    },
+    {
+      id: '0232',
+      english: 'When is your birthday?',
+      chinese: 'Nǐ de shēngrì shì shénme shíhòu？',
+    },
+    {
+      id: '0233',
+      english: 'How old are you?',
+      chinese: 'Nín duódà le？',
+    },
+    {
+      id: '0234',
+      english: 'Do you have children?',
+      chinese: 'Nín yǒu háizi ma？',
+    },
+    {
+      id: '0235',
+      english: 'Are you married?',
+      chinese: 'Nín jiéhūn le ma？',
+    },
+    {
+      id: '0236',
+      english: 'What is your phone number?',
+      chinese: 'Nínde diànhuà hàomǎ shì shénme？',
+    },
+    {
+      id: '0237',
+      english: 'What are your hobbies?',
+      chinese: 'Nín de ài hào shì shén me？',
+    },
+  ],
+  '14': [
+    {
+      id: '0238',
+      english: 'Clock',
+      chinese: 'Shí zhōng',
+    },
+    {
+      id: '0239',
+      english: '1 o’clock',
+      chinese: 'Yī diǎn',
+    },
+    {
+      id: '0240',
+      english: 'Hour',
+      chinese: 'Xiǎo shí',
+    },
+    {
+      id: '0241',
+      english: 'Minute',
+      chinese: 'Fēn zhōng',
+    },
+    {
+      id: '0242',
+      english: 'Second',
+      chinese: 'Miǎo',
+    },
+    {
+      id: '0243',
+      english: 'Today',
+      chinese: 'Jīntiān',
+    },
+    {
+      id: '0244',
+      english: 'Yesterday',
+      chinese: 'Zuótiān',
+    },
+    {
+      id: '0245',
+      english: 'Tomorrow',
+      chinese: 'Míngtiān',
+    },
+    {
+      id: '0246',
+      english: 'Weekend',
+      chinese: 'Zhōu mò',
+    },
+    {
+      id: '0247',
+      english: 'Time',
+      chinese: 'Shí jiān',
+    },
+  ],
+  '15': [
+    {
+      id: '0248',
+      english: 'Monday ',
+      chinese: 'Xīng qī yī',
+    },
+    {
+      id: '0249',
+      english: 'Tuesday',
+      chinese: 'Xīng qī èr',
+    },
+    {
+      id: '0250',
+      english: 'Wednesday',
+      chinese: 'Xīng qī sān',
+    },
+    {
+      id: '0251',
+      english: 'Thursday',
+      chinese: 'Xīng qī sì',
+    },
+    {
+      id: '0252',
+      english: 'Friday',
+      chinese: 'Xīng qī wǔ',
+    },
+    {
+      id: '0253',
+      english: 'Saturday',
+      chinese: 'Xīng qī liù',
+    },
+    {
+      id: '0254',
+      english: 'Sunday',
+      chinese: 'Xīng qī tiān',
+    },
+    {
+      id: '0255',
+      english: 'January',
+      chinese: 'Yī yuè',
+    },
+    {
+      id: '0256',
+      english: 'Februrary',
+      chinese: 'Èr yuè',
+    },
+    {
+      id: '0257',
+      english: 'March',
+      chinese: 'Sān yuè',
+    },
+    {
+      id: '0258',
+      english: 'April',
+      chinese: 'Sì yuè',
+    },
+    {
+      id: '0259',
+      english: 'May',
+      chinese: 'Wǔ yuè',
+    },
+    {
+      id: '0260',
+      english: 'June',
+      chinese: 'Liù yuè',
+    },
+    {
+      id: '0261',
+      english: 'July',
+      chinese: 'Qī yuè',
+    },
+    {
+      id: '0262',
+      english: 'August',
+      chinese: 'Bā yuè',
+    },
+    {
+      id: '0263',
+      english: 'September',
+      chinese: 'Jiǔ yuè',
+    },
+    {
+      id: '0264',
+      english: 'October',
+      chinese: 'Shí yuè',
+    },
+    {
+      id: '0265',
+      english: 'November',
+      chinese: 'Shí yī yuè',
+    },
+    {
+      id: '0266',
+      english: 'December',
+      chinese: 'Shí èr yuè',
+    },
+  ],
+  '16': [
+    {
+      id: '0267',
+      english: 'To bathe',
+      chinese: 'Xǐzǎo',
+    },
+    {
+      id: '0268',
+      english: 'To shower',
+      chinese: 'Línyù',
+    },
+    {
+      id: '0269',
+      english: 'Soap',
+      chinese: 'Féizào',
+    },
+    {
+      id: '0270',
+      english: 'Shampoo',
+      chinese: 'Xǐfàshuǐ',
+    },
+    {
+      id: '0271',
+      english: 'Conditioner',
+      chinese: 'Hùfàsù',
+    },
+    {
+      id: '0272',
+      english: 'Body Wash',
+      chinese: 'Mùyùlù',
+    },
+    {
+      id: '0273',
+      english: 'Face wash',
+      chinese: 'Xǐmiànnǎi',
+    },
+    {
+      id: '0274',
+      english: 'Hair dryer',
+      chinese: 'Chuīfēngjī',
+    },
+    {
+      id: '0275',
+      english: 'Towel',
+      chinese: 'Máojīn',
+    },
+    {
+      id: '0276',
+      english: 'Moisturizer',
+      chinese: 'Hùfūshuāng',
+    },
+    {
+      id: '0277',
+      english: 'Towel',
+      chinese: 'Máojīn',
+    },
+  ],
+  '17': [
+    {
+      id: '0278',
+      english: 'Transportation',
+      chinese: 'Jiāotōng yùnshū',
+    },
+    {
+      id: '0279',
+      english: 'Car',
+      chinese: 'Chē',
+    },
+    {
+      id: '0280',
+      english: 'Motorcycle',
+      chinese: 'Mótuō chē',
+    },
+    {
+      id: '0281',
+      english: 'Bus',
+      chinese: 'Gōnggòng qìchē',
+    },
+    {
+      id: '0282',
+      english: 'Taxi',
+      chinese: 'Chūzū chē',
+    },
+    {
+      id: '0283',
+      english: 'Bicycle',
+      chinese: 'Zìxíng chē',
+    },
+    {
+      id: '0284',
+      english: 'Subway',
+      chinese: 'Dìtiě',
+    },
+    {
+      id: '0285',
+      english: 'Helicopter',
+      chinese: 'Zhíshēng jī',
+    },
+    {
+      id: '0286',
+      english: 'Airplane',
+      chinese: 'Fēijī',
+    },
+    {
+      id: '0287',
+      english: 'Boat',
+      chinese: 'Chuán',
+    },
+  ],
   '01': [
     {
       id: '0001',
@@ -739,7 +1305,7 @@ export default <Database>{
     {
       id: '0145',
       english: 'Hungry',
-      chinese: 'è le',
+      chinese: "Jī'è de",
     },
   ],
   '09': [
