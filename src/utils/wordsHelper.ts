@@ -1,13 +1,13 @@
 export type WordListID =
-  | '01'
-  | '02'
-  | '03'
-  | '04'
-  | '05'
-  | '06'
-  | '07'
-  | '08'
-  | '09'
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | '7'
+  | '8'
+  | '9'
   | '10'
   | '11'
   | '12'
@@ -18,15 +18,15 @@ export type WordListID =
   | '17';
 
 const wordListTitles: { [key in WordListID]: string } = {
-  ['01']: 'Basics I',
-  ['02']: 'Basics II',
-  ['03']: 'Numbers',
-  ['04']: 'Animals',
-  ['05']: 'Body Parts',
-  ['06']: 'Colors',
-  ['07']: 'Directions',
-  ['08']: 'Feelings',
-  ['09']: 'Food',
+  ['1']: 'Basics I',
+  ['2']: 'Basics II',
+  ['3']: 'Numbers',
+  ['4']: 'Animals',
+  ['5']: 'Body Parts',
+  ['6']: 'Colors',
+  ['7']: 'Directions',
+  ['8']: 'Feelings',
+  ['9']: 'Food',
   ['10']: 'Music',
   ['11']: 'Money',
   ['12']: 'Countries',
