@@ -15,26 +15,28 @@ export type WordListID =
   | '14'
   | '15'
   | '16'
-  | '17';
+  | '17'
+  | '18';
 
 const wordListTitles: { [key in WordListID]: string } = {
   ['1']: 'Basics I',
   ['2']: 'Basics II',
-  ['3']: 'Numbers',
-  ['4']: 'Animals',
-  ['5']: 'Body Parts',
-  ['6']: 'Colors',
+  ['3']: 'Questions',
+  ['4']: 'Numbers',
+  ['5']: 'Telling Time',
+  ['6']: 'Days and Months',
   ['7']: 'Directions',
   ['8']: 'Feelings',
   ['9']: 'Food',
   ['10']: 'Music',
-  ['11']: 'Money',
-  ['12']: 'Countries',
-  ['13']: 'Questions',
-  ['14']: 'Telling time',
-  ['15']: 'Days and Months',
+  ['11']: 'Animals',
+  ['12']: 'Body Parts',
+  ['13']: 'Colors',
+  ['14']: 'Money',
+  ['15']: 'Countries',
   ['16']: 'Shower',
-  ['17']: 'Transportation',
+  ['17']: 'Furniture',
+  ['18']: 'Transportation',
 };
 
 export const getTitleForDisplay = (id: WordListID) => wordListTitles[id];

@@ -327,6 +327,98 @@ export default <Database>{
   ],
   '3': [
     {
+      id: '0220',
+      english: 'Who',
+      chinese: 'Shéi',
+    },
+    {
+      id: '0221',
+      english: 'What',
+      chinese: 'Shén me',
+    },
+    {
+      id: '0222',
+      english: 'Where',
+      chinese: 'Nǎ lǐ',
+    },
+    {
+      id: '0223',
+      english: 'Why',
+      chinese: 'Wèi shén me',
+    },
+    {
+      id: '0224',
+      english: 'When',
+      chinese: 'Shén me shí hou',
+    },
+    {
+      id: '0225',
+      english: 'How',
+      chinese: 'Zěn me',
+    },
+    {
+      id: '0226',
+      english: 'Which',
+      chinese: 'Nǎ ge',
+    },
+    {
+      id: '0227',
+      english: 'What’s your name?',
+      chinese: 'Nín jiào shénme míngzi？',
+    },
+    {
+      id: '0228',
+      english: 'Where do you live?',
+      chinese: 'Nín zhù zài nǎ lǐ？',
+    },
+    {
+      id: '0229',
+      english: 'What is this?',
+      chinese: 'Zhè shì shénme?',
+    },
+    {
+      id: '0230',
+      english: 'What are you thinking?',
+      chinese: 'Nǐ zài xiǎng shénme?',
+    },
+    {
+      id: '0231',
+      english: 'What do you want to do tomorrow?',
+      chinese: 'Nǐ míngtiān xiǎng zuò shénme?',
+    },
+    {
+      id: '0232',
+      english: 'When is your birthday?',
+      chinese: 'Nǐ de shēngrì shì shénme shíhòu？',
+    },
+    {
+      id: '0233',
+      english: 'How old are you?',
+      chinese: 'Nín duódà le？',
+    },
+    {
+      id: '0234',
+      english: 'Do you have children?',
+      chinese: 'Nín yǒu háizi ma？',
+    },
+    {
+      id: '0235',
+      english: 'Are you married?',
+      chinese: 'Nín jiéhūn le ma？',
+    },
+    {
+      id: '0236',
+      english: 'What is your phone number?',
+      chinese: 'Nínde diànhuà hàomǎ shì shénme？',
+    },
+    {
+      id: '0237',
+      english: 'What are your hobbies?',
+      chinese: 'Nín de ài hào shì shén me？',
+    },
+  ],
+  '4': [
+    {
       id: '0065',
       english: '0',
       chinese: 'Líng',
@@ -447,185 +539,153 @@ export default <Database>{
       chinese: 'Yī qiān',
     },
   ],
-  '4': [
-    {
-      id: '0089',
-      english: 'Animal',
-      chinese: 'Dòng wù',
-    },
-    {
-      id: '0090',
-      english: 'Dog',
-      chinese: 'Gǒu',
-    },
-    {
-      id: '0091',
-      english: 'Cat',
-      chinese: 'Māo',
-    },
-    {
-      id: '0092',
-      english: 'Dragon',
-      chinese: 'Lóng',
-    },
-    {
-      id: '0093',
-      english: 'Dolphin',
-      chinese: 'Hǎi tún',
-    },
-    {
-      id: '0094',
-      english: 'Snake',
-      chinese: 'Shé',
-    },
-    {
-      id: '0095',
-      english: 'Cow',
-      chinese: 'Niú',
-    },
-    {
-      id: '0096',
-      english: 'Rat',
-      chinese: 'Shǔ',
-    },
-    {
-      id: '0097',
-      english: 'Tiger',
-      chinese: 'Hǔ',
-    },
-    {
-      id: '0098',
-      english: 'Rabbit',
-      chinese: 'Tù zǐ',
-    },
-    {
-      id: '0099',
-      english: 'Horse',
-      chinese: 'Mǎ',
-    },
-  ],
   '5': [
     {
-      id: '0100',
-      english: 'Body',
-      chinese: 'Shēn tǐ',
+      id: '0238',
+      english: 'Clock',
+      chinese: 'Shí zhōng',
     },
     {
-      id: '0101',
-      english: 'Head',
-      chinese: 'Tóu',
+      id: '0239',
+      english: '1 o’clock',
+      chinese: 'Yī diǎn',
     },
     {
-      id: '0102',
-      english: 'Face',
-      chinese: 'Liǎn',
+      id: '0240',
+      english: 'Hour',
+      chinese: 'Xiǎo shí',
     },
     {
-      id: '0103',
-      english: 'Mouth',
-      chinese: 'Zuǐ',
+      id: '0241',
+      english: 'Minute',
+      chinese: 'Fēn zhōng',
     },
     {
-      id: '0104',
-      english: 'Chest',
-      chinese: 'Xiōng',
+      id: '0242',
+      english: 'Second',
+      chinese: 'Miǎo',
     },
     {
-      id: '0105',
-      english: 'Back',
-      chinese: 'Bèi',
+      id: '0243',
+      english: 'Today',
+      chinese: 'Jīntiān',
     },
     {
-      id: '0106',
-      english: 'Arm',
-      chinese: 'Gē bo',
+      id: '0244',
+      english: 'Yesterday',
+      chinese: 'Zuótiān',
     },
     {
-      id: '0107',
-      english: 'Hand',
-      chinese: 'Shǒu',
+      id: '0245',
+      english: 'Tomorrow',
+      chinese: 'Míngtiān',
     },
     {
-      id: '0108',
-      english: 'Leg',
-      chinese: 'Tuǐ',
+      id: '0246',
+      english: 'Weekend',
+      chinese: 'Zhōu mò',
     },
     {
-      id: '0109',
-      english: 'Feet',
-      chinese: 'Jiǎodǐ',
-    },
-    {
-      id: '0110',
-      english: 'Ear',
-      chinese: 'Ěrduǒ',
-    },
-    {
-      id: '0111',
-      english: 'Heart',
-      chinese: 'Ěrduǒ',
-    },
-    {
-      id: '0112',
-      english: 'Brain',
-      chinese: 'Nǎo',
+      id: '0247',
+      english: 'Time',
+      chinese: 'Shí jiān',
     },
   ],
   '6': [
     {
-      id: '0113',
-      english: 'Black',
-      chinese: 'Hēi sè',
+      id: '0248',
+      english: 'Monday ',
+      chinese: 'Xīng qī yī',
     },
     {
-      id: '0114',
-      english: 'White',
-      chinese: 'Bái sè',
+      id: '0249',
+      english: 'Tuesday',
+      chinese: 'Xīng qī èr',
     },
     {
-      id: '0115',
-      english: 'Red',
-      chinese: 'Hóng sè',
+      id: '0250',
+      english: 'Wednesday',
+      chinese: 'Xīng qī sān',
     },
     {
-      id: '0116',
-      english: 'Green',
-      chinese: 'Lǜ sè',
+      id: '0251',
+      english: 'Thursday',
+      chinese: 'Xīng qī sì',
     },
     {
-      id: '0117',
-      english: 'Yellow',
-      chinese: 'Huáng sè',
+      id: '0252',
+      english: 'Friday',
+      chinese: 'Xīng qī wǔ',
     },
     {
-      id: '0118',
-      english: 'Orange',
-      chinese: 'Chéngsè de',
+      id: '0253',
+      english: 'Saturday',
+      chinese: 'Xīng qī liù',
     },
     {
-      id: '0119',
-      english: 'Blue',
-      chinese: 'Lán sè',
+      id: '0254',
+      english: 'Sunday',
+      chinese: 'Xīng qī tiān',
     },
     {
-      id: '0120',
-      english: 'Pink',
-      chinese: 'Fěn sè',
+      id: '0255',
+      english: 'January',
+      chinese: 'Yī yuè',
     },
     {
-      id: '0121',
-      english: 'Purple',
-      chinese: 'Zǐ sè',
+      id: '0256',
+      english: 'Februrary',
+      chinese: 'Èr yuè',
     },
     {
-      id: '0122',
-      english: 'Gray',
-      chinese: 'Huī sè',
+      id: '0257',
+      english: 'March',
+      chinese: 'Sān yuè',
     },
     {
-      id: '0123',
-      english: 'Gold',
-      chinese: 'Jīn sè',
+      id: '0258',
+      english: 'April',
+      chinese: 'Sì yuè',
+    },
+    {
+      id: '0259',
+      english: 'May',
+      chinese: 'Wǔ yuè',
+    },
+    {
+      id: '0260',
+      english: 'June',
+      chinese: 'Liù yuè',
+    },
+    {
+      id: '0261',
+      english: 'July',
+      chinese: 'Qī yuè',
+    },
+    {
+      id: '0262',
+      english: 'August',
+      chinese: 'Bā yuè',
+    },
+    {
+      id: '0263',
+      english: 'September',
+      chinese: 'Jiǔ yuè',
+    },
+    {
+      id: '0264',
+      english: 'October',
+      chinese: 'Shí yuè',
+    },
+    {
+      id: '0265',
+      english: 'November',
+      chinese: 'Shí yī yuè',
+    },
+    {
+      id: '0266',
+      english: 'December',
+      chinese: 'Shí èr yuè',
     },
   ],
   '7': [
@@ -973,6 +1033,187 @@ export default <Database>{
   ],
   '11': [
     {
+      id: '0089',
+      english: 'Animal',
+      chinese: 'Dòng wù',
+    },
+    {
+      id: '0090',
+      english: 'Dog',
+      chinese: 'Gǒu',
+    },
+    {
+      id: '0091',
+      english: 'Cat',
+      chinese: 'Māo',
+    },
+    {
+      id: '0092',
+      english: 'Dragon',
+      chinese: 'Lóng',
+    },
+    {
+      id: '0093',
+      english: 'Dolphin',
+      chinese: 'Hǎi tún',
+    },
+    {
+      id: '0094',
+      english: 'Snake',
+      chinese: 'Shé',
+    },
+    {
+      id: '0095',
+      english: 'Cow',
+      chinese: 'Niú',
+    },
+    {
+      id: '0096',
+      english: 'Rat',
+      chinese: 'Shǔ',
+    },
+    {
+      id: '0097',
+      english: 'Tiger',
+      chinese: 'Hǔ',
+    },
+    {
+      id: '0098',
+      english: 'Rabbit',
+      chinese: 'Tù zǐ',
+    },
+    {
+      id: '0099',
+      english: 'Horse',
+      chinese: 'Mǎ',
+    },
+  ],
+  '12': [
+    {
+      id: '0100',
+      english: 'Body',
+      chinese: 'Shēn tǐ',
+    },
+    {
+      id: '0101',
+      english: 'Head',
+      chinese: 'Tóu',
+    },
+    {
+      id: '0102',
+      english: 'Face',
+      chinese: 'Liǎn',
+    },
+    {
+      id: '0103',
+      english: 'Mouth',
+      chinese: 'Zuǐ',
+    },
+    {
+      id: '0104',
+      english: 'Chest',
+      chinese: 'Xiōng',
+    },
+    {
+      id: '0105',
+      english: 'Back',
+      chinese: 'Bèi',
+    },
+    {
+      id: '0106',
+      english: 'Arm',
+      chinese: 'Gē bo',
+    },
+    {
+      id: '0107',
+      english: 'Hand',
+      chinese: 'Shǒu',
+    },
+    {
+      id: '0108',
+      english: 'Leg',
+      chinese: 'Tuǐ',
+    },
+    {
+      id: '0109',
+      english: 'Feet',
+      chinese: 'Jiǎodǐ',
+    },
+    {
+      id: '0110',
+      english: 'Ear',
+      chinese: 'Ěrduǒ',
+    },
+    {
+      id: '0111',
+      english: 'Heart',
+      chinese: 'Ěrduǒ',
+    },
+    {
+      id: '0112',
+      english: 'Brain',
+      chinese: 'Nǎo',
+    },
+  ],
+  '13': [
+    {
+      id: '0113',
+      english: 'Black',
+      chinese: 'Hēi sè',
+    },
+    {
+      id: '0114',
+      english: 'White',
+      chinese: 'Bái sè',
+    },
+    {
+      id: '0115',
+      english: 'Red',
+      chinese: 'Hóng sè',
+    },
+    {
+      id: '0116',
+      english: 'Green',
+      chinese: 'Lǜ sè',
+    },
+    {
+      id: '0117',
+      english: 'Yellow',
+      chinese: 'Huáng sè',
+    },
+    {
+      id: '0118',
+      english: 'Orange',
+      chinese: 'Chéngsè de',
+    },
+    {
+      id: '0119',
+      english: 'Blue',
+      chinese: 'Lán sè',
+    },
+    {
+      id: '0120',
+      english: 'Pink',
+      chinese: 'Fěn sè',
+    },
+    {
+      id: '0121',
+      english: 'Purple',
+      chinese: 'Zǐ sè',
+    },
+    {
+      id: '0122',
+      english: 'Gray',
+      chinese: 'Huī sè',
+    },
+    {
+      id: '0123',
+      english: 'Gold',
+      chinese: 'Jīn sè',
+    },
+  ],
+  '14': [
+    {
       id: '0191',
       english: 'Money',
       chinese: 'Qián',
@@ -1038,7 +1279,7 @@ export default <Database>{
       chinese: 'Qián bāo',
     },
   ],
-  '12': [
+  '15': [
     {
       id: '0204',
       english: 'America',
@@ -1120,247 +1361,6 @@ export default <Database>{
       chinese: 'Yìn dù',
     },
   ],
-  '13': [
-    {
-      id: '0220',
-      english: 'Who',
-      chinese: 'Shéi',
-    },
-    {
-      id: '0221',
-      english: 'What',
-      chinese: 'Shén me',
-    },
-    {
-      id: '0222',
-      english: 'Where',
-      chinese: 'Nǎ lǐ',
-    },
-    {
-      id: '0223',
-      english: 'Why',
-      chinese: 'Wèi shén me',
-    },
-    {
-      id: '0224',
-      english: 'When',
-      chinese: 'Shén me shí hou',
-    },
-    {
-      id: '0225',
-      english: 'How',
-      chinese: 'Zěn me',
-    },
-    {
-      id: '0226',
-      english: 'Which',
-      chinese: 'Nǎ ge',
-    },
-    {
-      id: '0227',
-      english: 'What’s your name?',
-      chinese: 'Nín jiào shénme míngzi？',
-    },
-    {
-      id: '0228',
-      english: 'Where do you live?',
-      chinese: 'Nín zhù zài nǎ lǐ？',
-    },
-    {
-      id: '0229',
-      english: 'What is this?',
-      chinese: 'Zhè shì shénme?',
-    },
-    {
-      id: '0230',
-      english: 'What are you thinking?',
-      chinese: 'Nǐ zài xiǎng shénme?',
-    },
-    {
-      id: '0231',
-      english: 'What do you want to do tomorrow?',
-      chinese: 'Nǐ míngtiān xiǎng zuò shénme?',
-    },
-    {
-      id: '0232',
-      english: 'When is your birthday?',
-      chinese: 'Nǐ de shēngrì shì shénme shíhòu？',
-    },
-    {
-      id: '0233',
-      english: 'How old are you?',
-      chinese: 'Nín duódà le？',
-    },
-    {
-      id: '0234',
-      english: 'Do you have children?',
-      chinese: 'Nín yǒu háizi ma？',
-    },
-    {
-      id: '0235',
-      english: 'Are you married?',
-      chinese: 'Nín jiéhūn le ma？',
-    },
-    {
-      id: '0236',
-      english: 'What is your phone number?',
-      chinese: 'Nínde diànhuà hàomǎ shì shénme？',
-    },
-    {
-      id: '0237',
-      english: 'What are your hobbies?',
-      chinese: 'Nín de ài hào shì shén me？',
-    },
-  ],
-  '14': [
-    {
-      id: '0238',
-      english: 'Clock',
-      chinese: 'Shí zhōng',
-    },
-    {
-      id: '0239',
-      english: '1 o’clock',
-      chinese: 'Yī diǎn',
-    },
-    {
-      id: '0240',
-      english: 'Hour',
-      chinese: 'Xiǎo shí',
-    },
-    {
-      id: '0241',
-      english: 'Minute',
-      chinese: 'Fēn zhōng',
-    },
-    {
-      id: '0242',
-      english: 'Second',
-      chinese: 'Miǎo',
-    },
-    {
-      id: '0243',
-      english: 'Today',
-      chinese: 'Jīntiān',
-    },
-    {
-      id: '0244',
-      english: 'Yesterday',
-      chinese: 'Zuótiān',
-    },
-    {
-      id: '0245',
-      english: 'Tomorrow',
-      chinese: 'Míngtiān',
-    },
-    {
-      id: '0246',
-      english: 'Weekend',
-      chinese: 'Zhōu mò',
-    },
-    {
-      id: '0247',
-      english: 'Time',
-      chinese: 'Shí jiān',
-    },
-  ],
-  '15': [
-    {
-      id: '0248',
-      english: 'Monday ',
-      chinese: 'Xīng qī yī',
-    },
-    {
-      id: '0249',
-      english: 'Tuesday',
-      chinese: 'Xīng qī èr',
-    },
-    {
-      id: '0250',
-      english: 'Wednesday',
-      chinese: 'Xīng qī sān',
-    },
-    {
-      id: '0251',
-      english: 'Thursday',
-      chinese: 'Xīng qī sì',
-    },
-    {
-      id: '0252',
-      english: 'Friday',
-      chinese: 'Xīng qī wǔ',
-    },
-    {
-      id: '0253',
-      english: 'Saturday',
-      chinese: 'Xīng qī liù',
-    },
-    {
-      id: '0254',
-      english: 'Sunday',
-      chinese: 'Xīng qī tiān',
-    },
-    {
-      id: '0255',
-      english: 'January',
-      chinese: 'Yī yuè',
-    },
-    {
-      id: '0256',
-      english: 'Februrary',
-      chinese: 'Èr yuè',
-    },
-    {
-      id: '0257',
-      english: 'March',
-      chinese: 'Sān yuè',
-    },
-    {
-      id: '0258',
-      english: 'April',
-      chinese: 'Sì yuè',
-    },
-    {
-      id: '0259',
-      english: 'May',
-      chinese: 'Wǔ yuè',
-    },
-    {
-      id: '0260',
-      english: 'June',
-      chinese: 'Liù yuè',
-    },
-    {
-      id: '0261',
-      english: 'July',
-      chinese: 'Qī yuè',
-    },
-    {
-      id: '0262',
-      english: 'August',
-      chinese: 'Bā yuè',
-    },
-    {
-      id: '0263',
-      english: 'September',
-      chinese: 'Jiǔ yuè',
-    },
-    {
-      id: '0264',
-      english: 'October',
-      chinese: 'Shí yuè',
-    },
-    {
-      id: '0265',
-      english: 'November',
-      chinese: 'Shí yī yuè',
-    },
-    {
-      id: '0266',
-      english: 'December',
-      chinese: 'Shí èr yuè',
-    },
-  ],
   '16': [
     {
       id: '0267',
@@ -1421,51 +1421,123 @@ export default <Database>{
   '17': [
     {
       id: '0278',
+      english: 'Table',
+      chinese: 'Zhuō zi',
+    },
+    {
+      id: '0279',
+      english: 'Chair',
+      chinese: 'Yǐ zi',
+    },
+    {
+      id: '0280',
+      english: 'Bed',
+      chinese: 'Chuáng',
+    },
+    {
+      id: '0281',
+      english: 'Couch',
+      chinese: 'Shā fā',
+    },
+    {
+      id: '0283',
+      english: 'Bookcase',
+      chinese: 'Shū chú',
+    },
+    {
+      id: '0284',
+      english: 'Shelf',
+      chinese: 'Shū jià',
+    },
+    {
+      id: '0285',
+      english: 'Shelves',
+      chinese: 'Chú jià',
+    },
+    {
+      id: '0286',
+      english: 'Wardrobe',
+      chinese: 'Yī guì',
+    },
+    {
+      id: '0287',
+      english: 'Dresser',
+      chinese: 'Wǔ dǒu guì',
+    },
+    {
+      id: '0288',
+      english: 'Coffee Table',
+      chinese: 'Chá jī',
+    },
+    {
+      id: '0289',
+      english: 'Mirror',
+      chinese: 'Jìng zi',
+    },
+    {
+      id: '0290',
+      english: 'Carpet',
+      chinese: 'Dìtǎn',
+    },
+    {
+      id: '0291',
+      english: 'Fireplace',
+      chinese: 'Bì lú',
+    },
+    {
+      id: '0292',
+      english: 'Candle',
+      chinese: 'Là zhú',
+    },
+  ],
+  '18': [
+    {
+      id: '0293',
       english: 'Transportation',
       chinese: 'Jiāotōng yùnshū',
     },
     {
-      id: '0279',
+      id: '0294',
       english: 'Car',
       chinese: 'Chē',
     },
     {
-      id: '0280',
+      id: '0295',
       english: 'Motorcycle',
       chinese: 'Mótuō chē',
     },
     {
-      id: '0281',
+      id: '0296',
       english: 'Bus',
       chinese: 'Gōnggòng qìchē',
     },
     {
-      id: '0282',
+      id: '0297',
       english: 'Taxi',
       chinese: 'Chūzū chē',
     },
     {
-      id: '0283',
+      id: '0298',
       english: 'Bicycle',
       chinese: 'Zìxíng chē',
     },
     {
-      id: '0284',
+      id: '0299',
       english: 'Subway',
       chinese: 'Dìtiě',
     },
     {
-      id: '0285',
+      id: '0300',
       english: 'Helicopter',
       chinese: 'Zhíshēng jī',
     },
     {
-      id: '0286',
+      id: '0301',
       english: 'Airplane',
       chinese: 'Fēijī',
     },
     {
-      id: '0287',
+      id: '0302',
       english: 'Boat',
       chinese: 'Chuán',
     },
