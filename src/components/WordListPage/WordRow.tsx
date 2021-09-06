@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 20,
-    marginBottom: 18,
+    marginTop: 18,
+    marginBottom: 16,
   },
   completedRow: {
     opacity: 0.4,

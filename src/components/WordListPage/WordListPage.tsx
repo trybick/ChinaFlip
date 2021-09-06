@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { useLocation } from 'react-router-native';
-import { Button, Card, Icon, Switch, Text } from 'react-native-elements';
+import { Button, Icon, Switch, Text } from 'react-native-elements';
 import { getTitleForDisplay, WordListID, Word as WordType } from 'utils/wordsHelper';
 import {
   useCompletedWordsStorage,
@@ -52,7 +52,6 @@ export default function WordListPage() {
             />
           </View>
 
-          <Card.Divider />
           <View style={styles.wordsContainer}>
             {!isLoadingIsFlipped &&
               !isLoadingTranslationHidden &&
@@ -86,6 +85,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: -8, // compensate for first WordRow
   },
   hideTranslationContainer: {
     flexDirection: 'row',
