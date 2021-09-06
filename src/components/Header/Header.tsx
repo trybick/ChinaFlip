@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Header as HeaderComponent } from 'react-native-elements';
 import { ROUTES } from 'utils/routes';
@@ -38,7 +38,7 @@ export default function Header({
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 90,
+    height: Platform.OS === 'ios' ? 90 : 80,
   },
   textContainer: {
     height: '100%',

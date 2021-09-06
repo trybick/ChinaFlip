@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { useLocation } from 'react-router-native';
 import { Button, Card, Icon, Switch, Text } from 'react-native-elements';
 import { getTitleForDisplay, WordListID, Word as WordType } from 'utils/wordsHelper';
@@ -27,77 +27,72 @@ export default function WordListPage() {
     useIsTranslationHiddenStorage();
 
   return (
-    <View>
+    <>
       <Header pageTitle={getTitleForDisplay(wordListID)} showBackButton />
+
       <ScrollView>
         <View style={styles.pageContainer}>
-          <Card containerStyle={styles.cardContainer}>
-            <View style={styles.buttonsWrapper}>
-              <View style={styles.hideTranslationContainer}>
-                <Switch
-                  onValueChange={toggleIsTranslationHidden}
-                  style={styles.switch}
-                  value={isTranslationHidden}
-                />
-                <Text onPress={toggleIsTranslationHidden} style={styles.hideTranslationText}>
-                  Hide Translation
-                </Text>
-              </View>
-              <Button
-                buttonStyle={styles.flipButtonButton}
-                containerStyle={styles.flipButtonContainer}
-                icon={<FlipIcon />}
-                onPress={toggleIsFlipped}
-                title={<Text style={styles.flipText}>Flip</Text>}
+          <View style={styles.buttonsWrapper}>
+            <View style={styles.hideTranslationContainer}>
+              <Switch
+                onValueChange={toggleIsTranslationHidden}
+                style={styles.switch}
+                value={isTranslationHidden}
               />
+              <Text onPress={toggleIsTranslationHidden} style={styles.hideTranslationText}>
+                Hide Translation
+              </Text>
             </View>
+            <Button
+              buttonStyle={styles.flipButtonButton}
+              containerStyle={styles.flipButtonContainer}
+              icon={<FlipIcon />}
+              onPress={toggleIsFlipped}
+              title={<Text style={styles.flipText}>Flip</Text>}
+            />
+          </View>
 
-            <Card.Divider />
-            <View style={styles.wordsContainer}>
-              {!isLoadingIsFlipped &&
-                !isLoadingTranslationHidden &&
-                words.map(word => (
-                  <WordRow
-                    key={word.id}
-                    isCompleted={getIsCompleted(word.id)}
-                    isFlipped={isFlipped}
-                    isTranslationHidden={isTranslationHidden}
-                    toggleCompletedWord={toggleCompletedWord}
-                    word={word}
-                  />
-                ))}
-            </View>
-          </Card>
+          <Card.Divider />
+          <View style={styles.wordsContainer}>
+            {!isLoadingIsFlipped &&
+              !isLoadingTranslationHidden &&
+              words.map(word => (
+                <WordRow
+                  key={word.id}
+                  isCompleted={getIsCompleted(word.id)}
+                  isFlipped={isFlipped}
+                  isTranslationHidden={isTranslationHidden}
+                  toggleCompletedWord={toggleCompletedWord}
+                  word={word}
+                />
+              ))}
+          </View>
         </View>
       </ScrollView>
-    </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   pageContainer: {
-    backgroundColor: 'white',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '30%',
-  },
-  cardContainer: {
-    width: '100%',
-  },
-  cardTitle: {
-    fontSize: 22,
+    paddingHorizontal: 8,
   },
   buttonsWrapper: {
+    width: '100%',
+    paddingVertical: 14,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 14,
   },
   hideTranslationContainer: {
     flexDirection: 'row',
   },
   hideTranslationText: {
     alignSelf: 'center',
-    fontSize: 13,
+    fontSize: Platform.OS === 'ios' ? 13 : 15,
   },
   switch: {
     transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }],
@@ -111,13 +106,13 @@ const styles = StyleSheet.create({
     width: 64,
   },
   flipIcon: {
-    marginRight: 3,
+    marginRight: 6,
   },
   flipText: {
     color: '#fff',
   },
   wordsContainer: {
-    paddingLeft: 3,
-    paddingRight: 6,
+    paddingLeft: 6,
+    paddingRight: 9,
   },
 });
