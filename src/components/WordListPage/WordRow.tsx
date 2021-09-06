@@ -61,6 +61,7 @@ export default function WordRow({
 
   return (
     <>
+      <Divider orientation="horizontal" />
       <View key={id} style={[styles.row, isCompleted && styles.completedRow]}>
         <View style={styles.wordsContainer}>
           {isFlipped ? (
@@ -84,7 +85,6 @@ export default function WordRow({
           type="material-community"
         />
       </View>
-      <Divider orientation="horizontal" />
     </>
   );
 }

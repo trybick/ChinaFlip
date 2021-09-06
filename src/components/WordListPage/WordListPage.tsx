@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: -8, // compensate for first WordRow
   },
   hideTranslationContainer: {
     flexDirection: 'row',
