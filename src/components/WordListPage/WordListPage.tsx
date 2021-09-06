@@ -28,13 +28,10 @@ export default function WordListPage() {
 
   return (
     <View>
-      <Header showBackButton />
+      <Header pageTitle={getTitleForDisplay(wordListID)} showBackButton />
       <ScrollView>
         <View style={styles.pageContainer}>
           <Card containerStyle={styles.cardContainer}>
-            <Card.Title style={styles.cardTitle}>{getTitleForDisplay(wordListID)}</Card.Title>
-            <Card.Divider />
-
             <View style={styles.buttonsWrapper}>
               <View style={styles.hideTranslationContainer}>
                 <Switch

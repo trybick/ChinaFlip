@@ -4,11 +4,18 @@ import { useHistory } from 'react-router-native';
 import { Header as HeaderComponent } from 'react-native-elements';
 import { ROUTES } from 'utils/routes';
 
-const text = 'ChinaFlip';
-
-export default function Header({ showBackButton }: { showBackButton?: boolean }) {
+export default function Header({
+  pageTitle,
+  showBackButton,
+}: {
+  pageTitle: string;
+  showBackButton?: boolean;
+}) {
   const history = useHistory();
-  const commonProps = { backgroundColor: '#2196f3', centerComponent: { text, style: styles.text } };
+  const commonProps = {
+    backgroundColor: '#2196f3',
+    centerComponent: { text: pageTitle, style: styles.text },
+  };
 
   return showBackButton ? (
     <HeaderComponent

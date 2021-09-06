@@ -11,7 +11,7 @@ export default function HomePage() {
 
   return (
     <View>
-      <Header />
+      <Header pageTitle="Word Categories" />
       <View style={styles.pageContainer}>
         {Object.entries(WordLibrary).map(([wordListID, words]) => (
           <WordListButton key={wordListID} wordListID={wordListID as WordListID} words={words} />
