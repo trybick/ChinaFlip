@@ -22,8 +22,10 @@ export default function Header({
   return showBackButton ? (
     <HeaderComponent
       leftComponent={{
-        text: 'Back',
-        style: styles.backText,
+        color: '#fff',
+        icon: 'arrow-back',
+        type: 'ionicon',
+        size: 21,
         onPress: () => history.push(ROUTES.HOME),
       }}
       leftContainerStyle={styles.textContainer}
@@ -45,9 +47,5 @@ const styles = StyleSheet.create({
   titleText: {
     color: '#fff',
     fontSize: 18,
-  },
-  backText: {
-    color: '#fff',
-    fontSize: 14,
   },
 });
