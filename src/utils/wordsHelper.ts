@@ -24,7 +24,7 @@ const wordListTitles: { [key in WordListID]: string } = {
   ['3']: 'Questions',
   ['4']: 'Numbers',
   ['5']: 'Telling Time',
-  ['6']: 'Days and Months',
+  ['6']: 'Days & Months',
   ['7']: 'Directions',
   ['8']: 'Feelings',
   ['9']: 'Food',

@@ -29,10 +29,10 @@ export default function WordListButton({
 
 const styles = StyleSheet.create({
   button: {
-    height: 50,
+    height: 60,
   },
   container: {
-    margin: 15,
+    margin: 10,
     minWidth: 160,
     maxWidth: 300,
   },
