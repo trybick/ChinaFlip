@@ -14,16 +14,19 @@ export default function Header({
   const history = useHistory();
   const commonProps = {
     backgroundColor: '#2196f3',
-    centerComponent: { text: pageTitle, style: styles.text },
+    centerContainerStyle: styles.textContainer,
+    centerComponent: { text: pageTitle, style: styles.titleText },
+    containerStyle: styles.headerContainer,
   };
 
   return showBackButton ? (
     <HeaderComponent
       leftComponent={{
         text: 'Back',
-        style: styles.text,
+        style: styles.backText,
         onPress: () => history.push(ROUTES.HOME),
       }}
+      leftContainerStyle={styles.textContainer}
       {...commonProps}
     />
   ) : (
@@ -32,7 +35,19 @@ export default function Header({
 }
 
 const styles = StyleSheet.create({
-  text: {
+  headerContainer: {
+    height: 90,
+  },
+  textContainer: {
+    height: '100%',
+    justifyContent: 'center',
+  },
+  titleText: {
     color: '#fff',
+    fontSize: 18,
+  },
+  backText: {
+    color: '#fff',
+    fontSize: 14,
   },
 });
