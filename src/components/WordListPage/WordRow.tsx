@@ -19,15 +19,15 @@ export default function WordRow({
 }) {
   const [isHiddenTranslationVisible, setIsHiddenTranslationVisible] = useState(false);
 
+  useEffect(() => {
+    isHiddenTranslationVisible && setIsHiddenTranslationVisible(false);
+  }, [isTranslationHidden, isFlipped, isCompleted]);
+
   const onPressWord = () => {
     if (isTranslationHidden) {
       setIsHiddenTranslationVisible(!isHiddenTranslationVisible);
     }
   };
-
-  useEffect(() => {
-    setIsHiddenTranslationVisible(false);
-  }, [isTranslationHidden, isFlipped, isCompleted]);
 
   const makeHiddenWord = (text: string) => Array(text.split('').length).fill('.');
 
