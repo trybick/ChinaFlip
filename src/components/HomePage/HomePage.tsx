@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import WordLibrary from 'database/words/WordLibrary';
 import { WordListID } from 'utils/wordsHelper';
 import { useBackButtonHandler } from 'hooks/useBackButtonHandler';
@@ -10,14 +10,14 @@ export default function HomePage() {
   useBackButtonHandler();
 
   return (
-    <View>
+    <ScrollView>
       <Header pageTitle="Word Categories" />
       <View style={styles.pageContainer}>
         {Object.entries(WordLibrary).map(([wordListID, words]) => (
           <WordListButton key={wordListID} wordListID={wordListID as WordListID} words={words} />
         ))}
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
