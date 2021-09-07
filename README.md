@@ -2,16 +2,16 @@
 
 > Android and iOS app to learn the most common Chinese words and phrases with native speaker audio
 
-# Demo
+## Demo
 
 <p align="center">
-<img src="./demo.png" width="300px"/>
+<img src="./demo.gif" width="300px"/>
 </p>
 
 ## Technologies
 
+- React Native
 - Expo
-- React
 - TypeScript
 - React Native Elements
 
