@@ -3,9 +3,9 @@ import os
 assets = './assets/sounds'
 library = './database/sounds/SoundLibrary.ts'
 
-sounds = os.listdir(assets)
-if '.DS_Store' in sounds:
-    sounds.remove('.DS_Store')
+fileNames = sorted(os.listdir(assets))
+if '.DS_Store' in fileNames:
+    fileNames.remove('.DS_Store')
 
 with open(library, 'w') as f:
     f.write('import { SoundLibrary } from \'./types\'')
@@ -13,9 +13,10 @@ with open(library, 'w') as f:
     f.write('export default <SoundLibrary>{')
     f.write('\n')
 
-    for n in range(1, len(sounds) + 1):
-        key = format(n, '04')
-        f.write(('  \'{0}\': require(\'../../assets/sounds/{0}.mp3\'),'.format(key)))
+    for n in range(0, len(fileNames)):
+        nameWithExtension = fileNames[n]
+        nameWithoutExtension = nameWithExtension[0:nameWithExtension.find('.')]
+        f.write(f'  \'{nameWithoutExtension}\': require(\'../../assets/sounds/{nameWithExtension}\'),')
         f.write('\n')
 
     f.write('};')
