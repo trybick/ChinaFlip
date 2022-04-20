@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import { BackButton, NativeRouter, Route, Switch } from 'react-router-native';
 import { ThemeProvider } from 'react-native-elements';
@@ -27,5 +26,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-registerRootComponent(App);
