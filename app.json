@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Chinese Flip",
+    "name": "Chinese Flip Language",
     "slug": "chinese-flip",
     "description": "Learn the most common Chinese words and phrases with native speaker audio",
     "privacy": "public",
@@ -15,11 +15,10 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trybicki.chineseflip"
     },
     "android": {
       "package": "com.trybicki.chineseflip"
