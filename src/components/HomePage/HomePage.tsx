@@ -13,7 +13,7 @@ export default function HomePage() {
     <ScrollView>
       <Header pageTitle="Word Categories" />
       <View style={styles.pageContainer}>
-        {Object.entries(WordLibrary).map(([wordListID, words]) => (
+        {Object.entries(WordLibrary)?.map(([wordListID, words]) => (
           <WordListButton key={wordListID} wordListID={wordListID as WordListID} words={words} />
         ))}
       </View>

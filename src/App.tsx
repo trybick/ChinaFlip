@@ -4,8 +4,8 @@ import { BackButton, NativeRouter, Route, Switch } from 'react-router-native';
 import { ThemeProvider } from 'react-native-elements';
 import { ROUTES } from 'utils/routes';
 import { loadSounds } from 'utils/soundPlayer';
-import HomePage from 'src/components/HomePage/HomePage';
-import WordListPage from 'src/components/WordListPage/WordListPage';
+import HomePage from 'components/HomePage/HomePage';
+import WordListPage from 'components/WordListPage/WordListPage';
 
 export default function App() {
   useEffect(() => {
