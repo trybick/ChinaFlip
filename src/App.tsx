@@ -4,7 +4,7 @@ import { BackButton, NativeRouter, Route, Switch } from 'react-router-native';
 import { ThemeProvider } from 'react-native-elements';
 import * as Sentry from 'sentry-expo';
 import { ROUTES } from 'utils/routes';
-import { loadSounds } from 'utils/soundPlayer';
+import { initAudio } from 'utils/soundPlayer';
 import HomePage from 'components/HomePage/HomePage';
 import WordListPage from 'components/WordListPage/WordListPage';
 
@@ -16,8 +16,7 @@ Sentry.init({
 
 export default function App() {
   useEffect(() => {
-    // temporarily not loading sounds
-    // loadSounds();
+    initAudio();
   }, []);
 
   return (
