@@ -16,11 +16,11 @@ export async function initAudio() {
 }
 
 export async function playSound(name: string) {
-  if (SOUNDS[name]) {
-    await SOUNDS[name].unloadAsync();
-  } else {
+  if (!SOUNDS[name]) {
     SOUNDS[name] = new Audio.Sound();
+    await SOUNDS[name].loadAsync(SoundLibrary[name]);
   }
-  await SOUNDS[name].loadAsync(SoundLibrary[name]);
-  await SOUNDS[name].replayAsync();
+  if (SOUNDS[name]) {
+    await SOUNDS[name].replayAsync();
+  }
 }
