@@ -16,7 +16,8 @@ Sentry.init({
 
 export default function App() {
   useEffect(() => {
-    loadSounds();
+    // temporarily not loading sounds
+    // loadSounds();
   }, []);
 
   return (
