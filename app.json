@@ -4,7 +4,7 @@
     "slug": "chinese-flip",
     "description": "Learn the most common Chinese words and phrases with native speaker audio",
     "privacy": "public",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "splash": {
@@ -16,12 +16,21 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
+    "plugins": ["sentry-expo"],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps"
+        }
+      ]
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.trybicki.chineseflip"
     },
     "android": {
-      "package": "com.trybicki.chineseflip"
+      "package": "com.trybicki.chineseflip",
+      "versionCode": 2
     }
   }
 }
