@@ -4,7 +4,7 @@
     "slug": "chinese-flip",
     "description": "Learn the most common Chinese words and phrases with native speaker audio",
     "privacy": "public",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "splash": {
@@ -30,7 +30,7 @@
     },
     "android": {
       "package": "com.trybicki.chineseflip",
-      "versionCode": 2
+      "versionCode": 3
     }
   }
 }
