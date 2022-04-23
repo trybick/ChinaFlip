@@ -14,7 +14,14 @@ import WordRow from './WordRow';
 type LocationState = { words: WordType[]; wordListID: WordListID };
 
 const FlipIcon = () => (
-  <Icon color="white" name="arrow-swap" size={12} style={styles.flipIcon} type="fontisto" />
+  <Icon
+    color="white"
+    name="arrow-swap"
+    size={12}
+    style={styles.flipIcon}
+    type="fontisto"
+    tvParallaxProperties={undefined}
+  />
 );
 
 export default function WordListPage() {
