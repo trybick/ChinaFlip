@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import { useHistory } from 'react-router-native';
 import { Button } from 'react-native-elements';

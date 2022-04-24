@@ -1,4 +1,3 @@
-import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import WordLibrary from 'database/words/WordLibrary';
 import { WordListID } from 'utils/wordsHelper';
@@ -11,7 +10,7 @@ export default function HomePage() {
 
   return (
     <ScrollView>
-      <Header pageTitle="Word Categories" />
+      <Header pageTitle="Categories" />
       <View style={styles.pageContainer}>
         {Object.entries(WordLibrary)?.map(([wordListID, words]) => (
           <WordListButton key={wordListID} wordListID={wordListID as WordListID} words={words} />

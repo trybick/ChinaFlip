@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import { Divider, Icon, Text } from 'react-native-elements';
 import { Word as WordType } from 'utils/wordsHelper';
@@ -50,6 +50,7 @@ export default function WordRow({
         onPress={() => playSound(id)}
         size={19}
         type="foundation"
+        tvParallaxProperties={undefined}
       />
       <TouchableWithoutFeedback {...(!isFlipped && { onPress: onPressWord })}>
         <Text style={[styles.chineseText, isHidden && styles.hiddenText]}>
@@ -83,6 +84,7 @@ export default function WordRow({
           onPress={() => toggleCompletedWord(id)}
           size={24}
           type="material-community"
+          tvParallaxProperties={undefined}
         />
       </View>
     </>

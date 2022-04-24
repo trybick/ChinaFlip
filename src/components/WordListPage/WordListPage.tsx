@@ -1,4 +1,3 @@
-import React from 'react';
 import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { useLocation } from 'react-router-native';
 import { Button, Icon, Switch, Text } from 'react-native-elements';
