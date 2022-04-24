@@ -45,7 +45,7 @@ export default function WordRow({
     <View style={styles.wordWrapper}>
       <Icon
         color="grey"
-        iconStyle={styles.volumeIconIcon}
+        iconStyle={styles.volumeIcon}
         name="volume"
         onPress={() => playSound(id)}
         size={23}
@@ -64,6 +64,15 @@ export default function WordRow({
     <>
       <Divider orientation="horizontal" />
       <View key={id} style={[styles.row, isCompleted && styles.completedRow]}>
+        <Icon
+          color="grey"
+          containerStyle={styles.checkboxIcon}
+          name={isCompleted ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
+          onPress={() => toggleCompletedWord(id)}
+          size={24}
+          type="material-community"
+          tvParallaxProperties={undefined}
+        />
         <View style={styles.wordsContainer}>
           {isFlipped ? (
             <>
@@ -77,15 +86,6 @@ export default function WordRow({
             </>
           )}
         </View>
-
-        <Icon
-          color="grey"
-          name={isCompleted ? 'checkbox-marked-outline' : 'checkbox-blank-outline'}
-          onPress={() => toggleCompletedWord(id)}
-          size={24}
-          type="material-community"
-          tvParallaxProperties={undefined}
-        />
       </View>
     </>
   );
@@ -99,7 +99,10 @@ const styles = StyleSheet.create({
     marginBottom: 14,
   },
   completedRow: {
-    opacity: 0.4,
+    opacity: 0.2,
+  },
+  checkboxIcon: {
+    marginRight: 10,
   },
   wordsContainer: {
     flexDirection: 'row',
@@ -117,7 +120,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     width: '82%',
   },
-  volumeIconIcon: {
+  volumeIcon: {
     padding: 6,
   },
   hiddenText: {
