@@ -15,8 +15,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
-    "plugins": ["sentry-expo"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "sentry-expo"
+    ],
     "hooks": {
       "postPublish": [
         {
@@ -26,7 +30,8 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.trybicki.chineseflip"
+      "bundleIdentifier": "com.trybicki.chineseflip",
+      "buildNumber": "2"
     },
     "android": {
       "package": "com.trybicki.chineseflip",
