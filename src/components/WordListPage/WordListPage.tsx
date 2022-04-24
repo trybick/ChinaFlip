@@ -83,14 +83,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: '30%',
-    paddingHorizontal: 14,
+    marginBottom: 12,
+    paddingHorizontal: 18,
   },
   buttonsWrapper: {
     width: '100%',
-    paddingVertical: 14,
+    paddingVertical: 18,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   hideTranslationContainer: {
     flexDirection: 'row',
@@ -107,8 +108,8 @@ const styles = StyleSheet.create({
   },
   flipButtonButton: {
     backgroundColor: '#2196f3',
-    height: 32,
-    width: 64,
+    height: 38,
+    width: 72,
   },
   flipIcon: {
     marginRight: 6,
