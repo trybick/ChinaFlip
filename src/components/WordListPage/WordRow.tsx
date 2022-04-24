@@ -48,7 +48,7 @@ export default function WordRow({
         iconStyle={styles.volumeIconIcon}
         name="volume"
         onPress={() => playSound(id)}
-        size={19}
+        size={23}
         type="foundation"
         tvParallaxProperties={undefined}
       />
@@ -95,8 +95,8 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 18,
-    marginBottom: 16,
+    marginTop: 16,
+    marginBottom: 14,
   },
   completedRow: {
     opacity: 0.4,

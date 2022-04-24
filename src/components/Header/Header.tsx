@@ -24,7 +24,7 @@ export default function Header({
         color: '#fff',
         icon: 'arrow-back',
         type: 'ionicon',
-        size: 21,
+        size: 28,
         onPress: () => history.push(ROUTES.HOME),
       }}
       leftContainerStyle={styles.textContainer}

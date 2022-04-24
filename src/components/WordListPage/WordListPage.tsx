@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '30%',
-    paddingHorizontal: 8,
+    paddingHorizontal: 14,
   },
   buttonsWrapper: {
     width: '100%',
