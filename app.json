@@ -6,9 +6,8 @@
     "privacy": "public",
     "version": "0.0.8",
     "orientation": "default",
-    "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/android/app-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#2196f3"
     },
@@ -29,13 +28,15 @@
       ]
     },
     "ios": {
+      "icon": "./assets/images/ios/app-icon.png",
       "supportsTablet": true,
       "bundleIdentifier": "com.trybicki.chineseflip",
       "buildNumber": "3"
     },
     "android": {
+      "icon": "./assets/images/android/app-icon.png",
       "package": "com.trybicki.chineseflip",
-      "versionCode": 6
+      "versionCode": 7
     }
   }
 }
