@@ -19,10 +19,10 @@
     "production": {
       "distribution": "store",
       "android": {
-        "autoIncrement": true
+        "autoIncrement": false
       },
       "ios": {
-        "autoIncrement": true
+        "autoIncrement": false
       }
     }
   },
