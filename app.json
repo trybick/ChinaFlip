@@ -36,7 +36,12 @@
     "android": {
       "icon": "./assets/images/android/app-icon.png",
       "package": "com.trybicki.chineseflip",
-      "versionCode": 9
+      "versionCode": 10
+    },
+    "extra": {
+      "eas": {
+        "projectId": "da4edbfe-1178-4cb3-b905-12d5533711f8"
+      }
     }
   }
 }
