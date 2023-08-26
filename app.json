@@ -4,7 +4,7 @@
     "slug": "chinese-flip",
     "description": "Learn the most common Chinese words and phrases with native speaker audio",
     "privacy": "public",
-    "version": "0.0.91",
+    "version": "0.0.93",
     "orientation": "default",
     "splash": {
       "image": "./assets/images/android/app-icon.png",
@@ -12,7 +12,8 @@
       "backgroundColor": "#2196f3"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/da4edbfe-1178-4cb3-b905-12d5533711f8"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -36,12 +37,15 @@
     "android": {
       "icon": "./assets/images/android/app-icon.png",
       "package": "com.trybicki.chineseflip",
-      "versionCode": 10
+      "versionCode": 13
     },
     "extra": {
       "eas": {
         "projectId": "da4edbfe-1178-4cb3-b905-12d5533711f8"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }

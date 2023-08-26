@@ -10,8 +10,6 @@ export async function initAudio() {
   await Audio.setAudioModeAsync({
     playsInSilentModeIOS: true,
     shouldDuckAndroid: true,
-    interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS,
-    interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
   });
 }
 
